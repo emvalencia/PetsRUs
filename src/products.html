@@ -6,31 +6,39 @@
     <title>Products</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <script type="text/javascript" src="products.js"></script>
 </head>
 <!-- nav bar here -->
 <body>
     <!-- table of products -->
+    <!-- pet selection drop down menu to filter results-->
+    <div class="pet-dropdown-menu">
+      <button onclick="handleClick()">Type of Pet</button>
+      <div id ="pet-dropdowns" class="dropdown-content">
+        <a href="#dogs">Dog</a>
+        <a href="#dogs">Cat</a>
+        <a href="#dogs">Bird</a>
+        <a href="#dogs">Reptile</a>
+        <a href="#dogs">Fish</a>
+        <a href="#dogs">Other</a>
+      </div>
+    </div>
     <table>
         <tr>
           <th>Product</th>
           <th>Description</th>
-          <th>Cost</th>
         </tr>
         <tr>
           <td><img src="../assets/adult-dog-food.png"/>Dog Food</td>
           <td>Nom nom food for dogs!</td>
-          <td>$29.99</td>
         </tr>
         <tr>
           <td><img src="../assets/adult-cat-food.jpg"/>Cat Food</td>
           <td>Nom nom food for cats!</td>
-          <td>$19.99</td>
         </tr>
         <tr>
           <td><img src="../assets/reptile-food.jpg"/>Reptile Food</td>
           <td>Nom nom food for reptiles!</td>
-          <td>$19.99</td>
         </tr>
       </table>
 </body>
