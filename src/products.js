@@ -1,8 +1,13 @@
-/*
-    Product page JavaScript code: consists of all functionality for the 
-    products page.
-*/
+function handleClick(element) {
 
-function dropdown() {
-    document.getElementById("pet-dropdowns").classList.toggle("show");
+    /* handle buy element */
+    if (element == 'buy') {
+        console.log('buy clicked');
+    } 
+
+    /* handle other requests */
+    else {
+        console.log(element);
+    }
+
 }
