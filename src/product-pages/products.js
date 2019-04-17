@@ -16,6 +16,9 @@ function handleClick(element) {
 
         /* switch to product pages */
         else if (element == 'dog-food') window.location.href = "dog-food.html";
+        else if (element == 'dog-toy') window.location.href = "dog-toy.html";
+        else if (element == 'dog-harness') window.location.href = "dog-harness.html";
+        else if (element == 'dog-treat') window.location.href = "dog-treat.html";
         
     }
 
