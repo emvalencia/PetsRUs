@@ -20,6 +20,7 @@
             <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content2">
+            <a href="allproducts.html">All</a>
             <a href="dog.html">Dogs</a>
             <a href="cat.html">Cats</a>
             <a href="reptile.html">Reptiles</a>
@@ -47,7 +48,7 @@
             <div class="col-sm">
                 <h3>PEDIGREE® Dry Dog Food Adult Roasted Chicken, Rice & Vegetable Flavor 17-lb bag</h3>
                 <h3>$29.99</h3>
-                <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button>
+                <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
             </div>
             <div class="col-2"></div>
         </div>
@@ -72,13 +73,21 @@
             <div class="col-2"></div>
         </div>
 
+        <!-- row #1 -->
+        <div class="row pt-2">
+            <div class="col-2"></div>
+            <div class="col-8 purple-header">
+                <h3>Purchase Item</h3>
+            </div>
+            <div class="col-2"></div>
+        </div>
 
         <!-- order form -->
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col">
-                <h3>Product Information</h3>
                 <form>
+                    <h3>Product Information</h3>
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="product-identifier">Product ID Number#</label>
@@ -137,6 +146,26 @@
                         <option>Expedited (2-3 business days)</option>
                         <option>Ground (4-6 business days)</option>
                         </select>
+                    </div>
+                    <h3>Payment Information</h3>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="credit-card">Credit Card Information</label>
+                            <input type="text" class="form-control" id="credit-card" placeholder="Enter credit card number">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="csc">CSC</label>
+                            <input type="text" class="form-control" id="csc" placeholder="Enter 3-digit csc">
+                        </div>
+                        <div class="form-group col-md-3">
+                            <label for="inputCreditCardType">Type of Card</label>
+                            <select id="inputCreditCardType" class="form-control">
+                            <option selected>Choose...</option>
+                            <option>VISA</option>
+                            <option>Mastercard</option>
+                            <option>American Express</option>
+                            </select>
+                        </div>
                     </div>
                     <button type="submit" class="btn btn-success">Proceed to Checkout</button>
                 </form>
