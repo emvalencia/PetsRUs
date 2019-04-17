@@ -9,10 +9,32 @@
     <script type="text/javascript" src="products.js"></script>
     <title>Products</title>
   </head>
-  <header>HEADER AND NAVBAR</header>
   <body>
+
+    <!-- nav bar -->
+    <div class="navbar2">
+        <a href="#home">Home</a>
+        <a href="#About">About</a>
+        <div class="dropdown2">
+            <button class="dropbtn2">Products 
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content2">
+            <a href="dog.html">Dogs</a>
+            <a href="cat.html">Cats</a>
+            <a href="reptile.html">Reptiles</a>
+            </div>
+        </div> 
+    </div>
+
+    <!-- cover image -->
+    <div>
+        <img src="../../assets/pets.png" alt="dog-cover-photo" class="cover-img"/>
+        <div class="centered">All Pets</div>
+    </div>
+
     <!-- container -->
-    <div class="container-fluid custom-background">
+    <div class="container-fluid">
 
         <!-- main row -->
         <div class="row pt-2">
@@ -27,30 +49,30 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><img src="../../assets/adult-dog-food.jpg" onclick="handleClick('dog-food')"/></th>
+                        <th scope="row"><img src="../../assets/adult-dog-food.jpg" onclick="handleClick('dog-food')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">PEDIGREE® Dry Dog Food Adult Roasted Chicken, Rice & Vegetable Flavor 17-lb bag</div>
                             <div class="price">$29.99</div>
                             <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('dog-food')">More Info</button>
-                            
+                            <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><img src="../../assets/adult-cat-food.jpg" onclick = "handleClick('cat-food')"/></th>
+                        <th scope="row"><img src="../../assets/adult-cat-food.jpg" onclick = "handleClick('cat-food')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">Purina ONE® Tender Selects Blend With Real Chicken Cat Food 22-lb bag</div>
                             <div class="price">$24.99</div>
                             <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('cat-food')">More Info</button>
-                            <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
+                            <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><img src="../../assets/reptile-food.jpg" onclick="handleClick('reptile-food')"/></th>
+                        <th scope="row"><img src="../../assets/reptile-food.jpg" onclick="handleClick('reptile-food')" class="product-img"/></th>
                         <td class="text"> 
                             <div class="product-title">Zilla Reptile Munchies Vegetable Mix Lizard Food, 4-oz bag</div>
                             <div class="price">$19.99</div>
                             <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('reptile-food')">More Info</button>
-                            <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
+                            <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button>
                         </td>
                     </tr>
                 </tbody>
@@ -65,5 +87,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
-  <footer>FOOTER AND NAVBAR</footer>
+  <div class="footer">Copyright © 2019 PetsRUs, Inc. All Rights Reserved.</div>
 </html>

@@ -9,20 +9,35 @@
     <script type="text/javascript" src="products.js"></script>
     <title>Products</title>
   </head>
-  <header>HEADER AND NAVBAR</header>
-  <body>
-    <!-- container -->
-    <div class="container-fluid custom-background">
-        <!-- row #1 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-8 purple-header">
-                <h3>Dogs</h3>
-            </div>
-            <div class="col-2"></div>
-        </div>
 
-        <!-- row #2 with table -->
+    <!-- nav bar -->
+    <div class="navbar2">
+        <a href="#home">Home</a>
+        <a href="#About">About</a>
+        <div class="dropdown2">
+            <button class="dropbtn2">Products 
+            <i class="fa fa-caret-down"></i>
+            </button>
+            <div class="dropdown-content2">
+            <a href="dog.html">Dogs</a>
+            <a href="cat.html">Cats</a>
+            <a href="reptile.html">Reptiles</a>
+            </div>
+        </div> 
+    </div>
+
+<body>
+
+    <!-- cover image -->
+    <div>
+        <img src="../../assets/dog-cover.jpg" alt="dog-cover-photo" class="cover-img"/>
+        <div class="centered">Dogs</div>
+    </div>
+
+    <!-- container -->
+    <div class="container-fluid">
+
+        <!-- row #1 with table -->
         <div class="row pt-2">
                 <div class="col-2"></div>
                 <div class="col-8">
@@ -37,7 +52,7 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <th scope="row"><img src="../../assets/adult-dog-food.jpg" onclick="handleClick('dog-food')"/></th>
+                        <th scope="row"><img src="../../assets/adult-dog-food.jpg" onclick="handleClick('dog-food')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">PEDIGREE® Dry Dog Food Adult Roasted Chicken, Rice & Vegetable Flavor 17-lb bag</div>
                             <div class="price">$29.99</div>
@@ -45,7 +60,7 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><img src="../../assets/dog-toys.jpg" onclick="handleClick('dog-toy')"/></th>
+                        <th scope="row"><img src="../../assets/dog-toys.jpg" onclick="handleClick('dog-toy')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">ZippyPaws Skinny Peltz No Stuffing Squeaky Plush Dog Toys, 3-pack, Large</div>
                             <div class="price">$12.99</div>
@@ -53,15 +68,15 @@
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><img src="../../assets/dog-harness.jpg" onclick="handleClick('dog-harness')"/></th>
+                        <th scope="row"><img src="../../assets/dog-harness.jpg" onclick="handleClick('dog-harness')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">OneTigris Tactical Service Vest Dog Harness</div>
                             <div class="price">$49.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('dog-harness')">More Info</button>
+                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('dog-harness')" class="product-img">More Info</button>
                         </td>
                     </tr>
                     <tr>
-                        <th scope="row"><img src="../../assets/dog-treat.jpg" onclick="handleClick('dog-treat')"/></th>
+                        <th scope="row"><img src="../../assets/dog-treat.jpg" onclick="handleClick('dog-treat')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">American Journey Beef Jerky Grain-Free Dog Treats</div>
                             <div class="price">$7.99</div>
@@ -80,5 +95,5 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
-  <footer>FOOTER AND NAVBAR</footer>
+  <div class="footer">Copyright © 2019 PetsRUs, Inc. All Rights Reserved.</div>
 </html>

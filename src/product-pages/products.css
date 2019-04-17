@@ -1,7 +1,19 @@
-img {
+.product-img {
     width: 300px;
     height: 300px;
     background: white;
+}
+
+.large-image {
+    width: 450px;
+    height: 450px;
+    background: white;
+}
+
+.cover-img {
+    width: 100%;
+    height: auto;
+    opacity: 0.9;
 }
 
 .text {
@@ -20,3 +32,14 @@ img {
 .button-padding {
     padding: 2%;
 }
+
+.centered {
+    position: absolute;
+    top: 35%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 150px;
+    color: white;
+    font-weight: 500;
+    text-shadow: 5px 5px black;
+  }
