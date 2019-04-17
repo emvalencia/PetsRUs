@@ -1,7 +1,6 @@
-background {
-
+.card-text-sm{
+  font-size: 12px;
 }
-
 .purple-header {
     background-color: #7D004C; 
     color:white; 
