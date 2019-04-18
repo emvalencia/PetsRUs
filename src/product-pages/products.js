@@ -1,8 +1,60 @@
+var phone_is_valid = false;
+var cc_is_valid    = false;
+
+function validate_form()
+{
+    this.phone_is_valid = false;
+    this.cc_is_valid    = false;
+
+    this.validateCCInput();
+    this.validatePhoneInput();
+
+    if(this.cc_is_valid && this.phone_is_valid)
+        document.getElementById('checkout-btn').disabled = false;
+    else
+        document.getElementById('checkout-btn').disabled = true;
+}
+
+function validateCCInput()
+{
+    var re = /\b(?:\d{4}[ -]?){3}(?=\d{4}\b)/; 
+    var credit_card = document.forms['submit-order-form']['credit-card'].value;
+    var is_cc_valid = re.exec(credit_card);
+
+
+    if (!is_cc_valid && credit_card != "")
+        document.getElementById('credit-card').classList.add('is-invalid');  
+    else if (is_cc_valid)
+    {
+        this.cc_is_valid = true;
+        document.getElementById('credit-card').classList.remove('is-invalid');
+        document.getElementById('credit-card').classList.add('is-valid');
+    }
+}
+
+function validatePhoneInput()
+{
+    var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/; 
+
+    var phone_number = document.forms['submit-order-form']['phone-num-input'].value;
+    var is_phone_valid = re.exec(phone_number); 
+
+    if (!is_phone_valid && phone_number != "")
+        document.getElementById('phone').classList.add('is-invalid');  
+    else if(is_phone_valid)
+    {
+        this.phone_is_valid = true;
+        document.getElementById('phone').classList.remove('is-invalid');
+        document.getElementById('phone').classList.add('is-valid');  
+    }  
+}
+
+
 function handleClick(element) {
 
     /* handle buy element */
     if (element == 'buy') {
-        console.log('buy clicked');
+        console.log('generate email');  
     } 
 
     /* handle other requests */
