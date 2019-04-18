@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="../products.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../sytles.css">
+    <script src="../products.js"></script>
     <title>Dog Food</title>
   </head>
   <body>
@@ -85,7 +86,7 @@
         <div class="row pt-2 pb-5">
             <div class="col-2"></div>
             <div class="col">
-                <form class="needs-validation" novalidate>
+                <form name="submit-order-form" class="needs-validation" novalidate id="main-order-form">
                     <h3>Product Information</h3>
                     <div class="form-row">
                         <div class="form-group col-md-12">
@@ -94,7 +95,7 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>
-                            <input type="text" class="form-control" id="quantity" placeholder="3" required>
+                            <input oninput="validate_form()" name="quantity-input" type="text" class="form-control" id="quantity" placeholder="3" required>
                             <div class="invalid-feedback">Please enter a quantity</div>
                         </div>
                     </div>
@@ -102,34 +103,41 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="first-name">First Name</label>
-                            <input type="text" class="form-control" id="first-name" placeholder="Enter first name" required>
+                            <input oninput="validate_form()" type="text" class="form-control" id="first-name" placeholder="John" required>
                             <div class="invalid-feedback">Please enter your first name</div>
                         </div>
                         <div class="form-group col-md-6">
                             <label for="last-name">Last Name</label>
-                            <input type="text" class="form-control" id="last-name" placeholder="Enter last name" required>
-                            <div class="invalid-feedback">Please enter your last name</div>
+                            <input oninput="validate_form()" type="text" class="form-control" id="last-name" placeholder="Doe" required>
+                            <div class="invalid-feedback" >Please enter your last name</div>
 
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-8">
                             <label for="email-address">Email Address</label>
-                            <input type="email" class="form-control" id="email-address" placeholder="Enter email" required>
+                            <input oninput="validate_form()" type="email" class="form-control" id="email-address" placeholder="johndoe@youremail.com" required>
                             <div class="invalid-feedback">Please enter a valid email address</div>
 
                         </div>
-                        <div class="form-group col-md-4">
+                        <div class="form-group col-md-4" id="phone-form-group">
                             <label for="phone">Phone Number</label>
-                            <input type="text" class="form-control" id="phone" placeholder="Enter phone number" required>
-                            <div class="invalid-feedback">Please enter your phone number</div>
+                            <input oninput="validate_form()" name="phone-num-input" type="text" class="form-control" id="phone" placeholder="123-123-1234" required>
+                            <div class="invalid-feedback" id="phone-feedback">Please enter as: 123-123-1234</div>
 
                         </div>
                     </div>
                     <div class="form-row">
+                        <div class="form-group col-md-12">
+                            <label for="inputAddress">Address</label>
+                            <input oninput="validate_form()" name="address-input" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
+                            <div class="invalid-feedback">Please enter a valid address</div>
+                          </div>
+                    </div>
+                    <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="inputCity">City</label>
-                            <input type="text" class="form-control" id="inputCity" placeholder="Enter City" required>
+                            <input oninput="validate_form()" name = "city-input" type="text" class="form-control" id="inputCity" placeholder="Pasadena" required>
                             <div class="invalid-feedback">Please enter your city</div>
 
                         </div>
@@ -145,8 +153,8 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputZip">Zip</label>
-                            <input type="text" class="form-control" id="inputZip" placeholder="Enter zip" required>
-                            <div class="invalid-feedback">Please enter your zip code</div>
+                            <input oninput="validate_form()" type="text" class="form-control" id="inputZip" placeholder="90003" required>
+                            <div class="invalid-feedback">Please enter a valid zip code</div>
                         </div>
                     </div>
                     <div class="form-group">
@@ -163,13 +171,13 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="credit-card">Credit Card Information</label>
-                            <input type="text" class="form-control" id="credit-card" placeholder="Enter credit card number" required>
-                            <div class="invalid-feedback">Please enter your credit card number</div>
+                            <input oninput="validate_form()" type="text" class="form-control" id="credit-card" placeholder="1234-1234-1234-1234" required>
+                            <div class="invalid-feedback">Please enter as: 1234-1234-1234-1234</div>
 
                         </div>
                         <div class="form-group col-md-3">
                             <label for="csc">CSC</label>
-                            <input type="text" class="form-control" id="csc" placeholder="Enter 3-digit csc" required>
+                            <input oninput="validate_form()" type="text" class="form-control" id="csc" placeholder="123" required>
                             <div class="invalid-feedback">Please enter your 3-digit csc</div>
 
                         </div>
@@ -184,96 +192,33 @@
                             <div class="invalid-feedback">Please select a card type</div>
                         </div>
                     </div>
-                    <button type="submit" class="btn btn-success">Proceed to Checkout</button>
+                    <button disabled id="checkout-btn" type="submit" class="btn btn-success" onclick="handleClick('buy')">Proceed to Checkout</button>
                 </form>
             </div>
             <div class="col-2"></div>
         </div>
-        <!-- <form class="needs-validation" novalidate>
-                <div class="form-row">
-                  <div class="col-md-4 mb-3">
-                    <label for="validationCustom01">First name</label>
-                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Mark" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <label for="validationCustom02">Last name</label>
-                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Otto" required>
-                    <div class="valid-feedback">
-                      Looks good!
-                    </div>
-                  </div>
-                  <div class="col-md-4 mb-3">
-                    <label for="validationCustomUsername">Username</label>
-                    <div class="input-group">
-                      <div class="input-group-prepend">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                      </div>
-                      <input type="text" class="form-control" id="validationCustomUsername" placeholder="Username" aria-describedby="inputGroupPrepend" required>
-                      <div class="invalid-feedback">
-                        Please choose a username.
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="col-md-6 mb-3">
-                    <label for="validationCustom03">City</label>
-                    <input type="text" class="form-control" id="validationCustom03" placeholder="City" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid city.
-                    </div>
-                  </div>
-                  <div class="col-md-3 mb-3">
-                    <label for="validationCustom04">State</label>
-                    <input type="text" class="form-control" id="validationCustom04" placeholder="State" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid state.
-                    </div>
-                  </div>
-                  <div class="col-md-3 mb-3">
-                    <label for="validationCustom05">Zip</label>
-                    <input type="text" class="form-control" id="validationCustom05" placeholder="Zip" required>
-                    <div class="invalid-feedback">
-                      Please provide a valid zip.
-                    </div>
-                  </div>
-                </div>
-                <div class="form-group">
-                  <div class="form-check">
-                    <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                    <label class="form-check-label" for="invalidCheck">
-                      Agree to terms and conditions
-                    </label>
-                    <div class="invalid-feedback">
-                      You must agree before submitting.
-                    </div>
-                  </div>
-                </div>
-                <button class="btn btn-primary" type="submit">Submit form</button>
-              </form> -->
-              
-              <script>
-              (function() {
-                'use strict';
-                window.addEventListener('load', function() {
 
-                    var forms = document.getElementsByClassName('needs-validation');
 
-                    var validation = Array.prototype.filter.call(forms, function(form) {
-                    form.addEventListener('submit', function(event) {
-                      if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                      }
-                      form.classList.add('was-validated');
-                    }, false);
-                  });
-                }, false);
-              })();
-              </script>
+        <!-- used to handle order form validation -->
+        <script>
+        (function() {
+          'use strict';
+          window.addEventListener('load', function() {
+
+              var forms = document.getElementsByClassName('needs-validation');
+
+              var validation = Array.prototype.filter.call(forms, function(form) {
+              form.addEventListener('submit', function(event) {
+                if (form.checkValidity() === false) {
+                  event.preventDefault();
+                  event.stopPropagation();
+                }
+                form.classList.add('was-validated');
+              }, false);
+            });
+          }, false);
+        })();
+        </script>
     
     </div>
 
