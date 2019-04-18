@@ -1,15 +1,45 @@
-var phone_is_valid = false;
-var cc_is_valid    = false;
+var phone_is_valid       = false;
+var cc_is_valid          = false;
+var all_fields_populated = false;
+
+function check_fields_populated()
+{
+    var fields = 
+    [
+        document.forms['submit-order-form']['quantity-input'].value,
+        document.forms['submit-order-form']['fname'].value,
+        document.forms['submit-order-form']['lname'].value,
+        document.forms['submit-order-form']['email'].value,
+        document.forms['submit-order-form']['address-input'].value,
+        document.forms['submit-order-form']['city-input'].value,
+        document.forms['submit-order-form']['zip_code'].value,
+        document.forms['submit-order-form']['csc-code'].value
+    ]
+
+    for(var f = 0; f < fields.length; f++)
+    {
+        if(fields[f] == "")
+        {
+            this.all_fields_populated = false;
+            return;
+        }
+
+    }
+
+    this.all_fields_populated = true;
+}
 
 function validate_form()
 {
     this.phone_is_valid = false;
     this.cc_is_valid    = false;
 
+    this.check_fields_populated();
+
     this.validateCCInput();
     this.validatePhoneInput();
 
-    if(this.cc_is_valid && this.phone_is_valid)
+    if(this.cc_is_valid && this.phone_is_valid && this.all_fields_populated)
         document.getElementById('checkout-btn').disabled = false;
     else
         document.getElementById('checkout-btn').disabled = true;
