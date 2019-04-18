@@ -24,6 +24,15 @@
     font-size: 20px;
 }
 
+.text p {
+    font-size: 15px;
+}
+
+.text div {
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
 .product-title {
     font-weight: 600;
     font-size: 20px;
@@ -38,7 +47,6 @@
     .transparent-box {
         display: inline-block;
         width: 50%; 
-        /* margin: 50px; */
         background-color: whitesmoke;
         text-align: center;
         border: 2px solid black;
@@ -50,7 +58,7 @@
         font-size: 3em;
         color:#7D004C;
         font-weight: 500;
-        text-shadow: 3px 3px black;
+        text-shadow: 1.6px 1.6px black;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
     }
 
@@ -61,18 +69,17 @@
     .transparent-box {
         display: inline-block;
         width: 50%; 
-        /* margin: 50px; */
         background-color: whitesmoke;
         text-align: center;
         border: 2px solid black;
-        opacity: 0.5;
+        opacity: 0.65;
         position: absolute;
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
         font-size: 10em;
         color:#7D004C;
-        font-weight: 500;
+        font-weight: 500 bold;
         text-shadow: 3px 3px black;
         font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;   
     }

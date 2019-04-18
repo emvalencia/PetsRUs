@@ -3,6 +3,7 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" media="screen" href="products.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../sytles.css">
@@ -16,7 +17,7 @@
         <a href="../about.html">About</a>
         <div class="dropdown2">
             <button class="dropbtn2">Products 
-            <i class="fa fa-caret-down"></i>
+                <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content2">
             <a href="allproducts.html">All</a>
@@ -28,14 +29,20 @@
     </div>
 
 <body>
-    <!-- cover image -->
-    <div style="text-align: center;">
-        <img src="../../assets/cat-cover.jpg" alt="cat-cover-photo" class="cover-img"/>
-        <div class="transparent-box">Cats</div>
-    </div>
 
     <!-- container -->
     <div class="container-fluid">
+
+        <!-- cover image -->
+        <div class="row">
+            <div class="col-lg-12 px-0">
+                <div style="text-align: center;">
+                    <img src="../../assets/cat-cover.jpg" alt="cat-cover-photo" class="cover-img"/>
+                    <div class="transparent-box">Cats
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- row #1 with table -->
         <div class="row pt-2">
@@ -55,6 +62,8 @@
                         <th scope="row"><img src="../../assets/adult-cat-food.jpg" alt="cat-food" onclick="handleClick('cat-food')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">Purina ONE® Tender Selects Blend With Real Chicken Cat Food 22-lb bag</div>
+                            <p>Purina's Tender Selects Blend is a vet-recommended nutritious meal for your beloved cat. Each bite is filled with essential 
+                                vitamins, minerals, and taurine to provide a well-balanced diet and promote a healthy skin and coat.</p>
                             <div class="price">$24.99</div>
                             <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('cat-food')">More Info</button>
                         </td>
@@ -63,6 +72,8 @@
                         <th scope="row"><img src="../../assets/cat-playground.jpg" alt="cat-playground" onclick="handleClick('cat-playground')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">Frisco 72-in Cat Tree</div>
+                            <p>This 72-inch tall cream-colored cat tree is the ultimate all-in one spot for your kitty! The tree comes with 10 scratching posts
+                                and two scratch board ramps. It is covered with a soft, plush fabric and is purrfect for multi-cat households. </p>
                             <div class="price">$69.99</div>
                             <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('cat-playground')">More Info</button>
                         </td>
@@ -71,6 +82,8 @@
                         <th scope="row"><img src="../../assets/cat-carrier.jpg" alt="cat-carrier" onclick="handleClick('cat-carrier')" class="product-img"/></th>
                         <td class="text">
                             <div class="product-title">Petmate® Compass Fashion Pet Carrier</div>
+                            <p>The Petmate cat carrier comes in a bright hot pink color and is perfect for most cat sizes! It has Quick Slide
+                                 'N Snap technology that allows for easy assembly. It also provides 360-degree ventilation and has a Quick-Latch-2-way door.</p>
                             <div class="price">$29.99</div>
                             <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('cat-carrier')">More Info</button>
                         </td>
