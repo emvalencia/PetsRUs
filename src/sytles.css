@@ -45,7 +45,9 @@ body {
   }
   
   .navbar2 a:hover, .dropdown2:hover .dropbtn2{
-    background-color: rgb(116, 32, 32);
+    background-color:#7D004C;
+    text-decoration:none; 
+    color: white;
   }
   .dropdown-content2 {
     display: none;
