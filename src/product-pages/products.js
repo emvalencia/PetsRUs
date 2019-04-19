@@ -36,11 +36,18 @@ function validate_form()
 
     this.check_fields_populated();
 
-    this.validateCCInput();
-    this.validatePhoneInput();
+    if(this.all_fields_populated)
+    {
+        this.validateCCInput();
+        this.validatePhoneInput();
 
-    if(this.cc_is_valid && this.phone_is_valid && this.all_fields_populated)
-        document.getElementById('checkout-btn').disabled = false;
+        if(this.cc_is_valid && document.forms['submit-order-form']['credit-card'].value !="" && 
+            this.phone_is_valid && document.forms['submit-order-form']['phone'].value != "")
+            {
+            
+                document.getElementById('checkout-btn').disabled = false;
+            }
+    }
     else
         document.getElementById('checkout-btn').disabled = true;
 }
@@ -52,16 +59,29 @@ function validateCCInput()
     var is_cc_valid = re.exec(credit_card);
 
 
-    if (!is_cc_valid && credit_card != "")
-        document.getElementById('credit-card').classList.add('is-invalid');  
+    if (!is_cc_valid || credit_card == "")
+        this.cc_is_valid = false;  
     else if (is_cc_valid)
     {
         this.cc_is_valid = true;
+    }
+}
+
+function adjustCCInputStyles()
+{
+    var re = /\b(?:\d{4}[ -]?){3}(?=\d{4}\b)/; 
+    var credit_card = document.forms['submit-order-form']['credit-card'].value;
+    var is_cc_valid = re.exec(credit_card);
+
+
+    if (!is_cc_valid || credit_card != "")
+        document.getElementById('credit-card').classList.add('is-invalid');  
+    else if (is_cc_valid)
+    {
         document.getElementById('credit-card').classList.remove('is-invalid');
         document.getElementById('credit-card').classList.add('is-valid');
     }
 }
-
 function validatePhoneInput()
 {
     var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/; 
@@ -69,11 +89,24 @@ function validatePhoneInput()
     var phone_number = document.forms['submit-order-form']['phone-num-input'].value;
     var is_phone_valid = re.exec(phone_number); 
 
-    if (!is_phone_valid && phone_number != "")
+    if (!is_phone_valid || phone_number == "")
+        this.phone_is_valid = false;  
+    else if(is_phone_valid)
+    {
+        this.phone_is_valid = true; 
+    }  
+}
+function adjustPhoneInputStyles()
+{
+    var re = /(?:\d{3}|\(\d{3}\))([-\/\.])\d{3}\1\d{4}/; 
+
+    var phone_number = document.forms['submit-order-form']['phone-num-input'].value;
+    var is_phone_valid = re.exec(phone_number); 
+
+    if (!is_phone_valid || phone_number != "")
         document.getElementById('phone').classList.add('is-invalid');  
     else if(is_phone_valid)
     {
-        this.phone_is_valid = true;
         document.getElementById('phone').classList.remove('is-invalid');
         document.getElementById('phone').classList.add('is-valid');  
     }  
@@ -84,7 +117,9 @@ function handleClick(element) {
 
     /* handle buy element */
     if (element == 'buy') {
-        console.log('generate email');  
+        console.log('generate email');
+        this.validateCCInput();
+        this.validatePhoneInput();  
     } 
 
     /* handle other requests */
