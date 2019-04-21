@@ -11,17 +11,15 @@ function send_email()
     var product_id    = document.getElementById('product-id-num').textContent;
     var product_price = document.getElementById('product-price').textContent;
     var quantity      = document.forms['submit-order-form']['quantity'].value;
+    var nl = "%0D%0A"
 
     var subject = "PetsRUs Purchase Confirmation: " + product_desc;
-    var body    = "The following items were purchased: \n \
-                    \tProduct: " + product_name + "\n \
-                    \tProduct ID Number: " + product_id + "\n \
-                    \tProduct Descritpion: " + product_desc + "\n \
-                    \tQuantity: " + quantity + ", Price (per item): " + product_price;
+    var body    = "The following items were purchased: " + nl + nl +
+                    "Product: " + product_name + nl + 
+                    "Product Description: " + product_desc + nl +
+                    "Total Items: " + quantity + ", Price (per item): " + product_price;
 
     window.open('mailto:' + email_address + '?subject=' + subject + '&body=' + body);
-
-    // window.alert(body);
 }
 
 function updateAllStylings(element)
