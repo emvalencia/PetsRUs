@@ -32,46 +32,37 @@
             <div class="col-2"></div>
         </div>
 
-        <!-- row #2 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-sm">
-                <img src="../../../assets/reptile-habitat.jpg" class="large-image"/>
-            </div>
-            <div class="col-sm">
-                <h3 id="product-description">Zilla Tropical Vertical Starter Kit with Mini Halogen Lighting</h3>
-                <h3 id="product-price">$84.99</h3>
-                <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
-            </div>
-            <div class="col-2"></div>
-        </div>
+        <?php
+            require_once "../../DBConnect.php";
+            $pdo = connect();
+            $data = $pdo->query("select * from product where id = 1000000009;")->fetchAll();
+            foreach ($data as $row) {
+            }
 
-        <!-- row #3 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <p>
-                    <strong>Description</strong>
-                    Zilla’s Tropical Vertical Starter Kit is specially designed for small, tropical tree-living reptiles like tree 
-                    frogs, house geckos, crested geckos and anoles. It comes with a 12” x 12” x 18” glass terrarium that features 
-                    a front door with a locking latch and pin for added safety, and a hinged screen top for easy access to your pet. 
-                    The included textured background and coconut husk bedding gives your sidekick a more rugged and realistic outdoor 
-                    feeling while the mini halogen dome and day blue 25w mini halogen bulb offer pinpointed light and heat to keep 
-                    him warm. Plus, the included humidity and temperature gauge provides an easy way for you to maintain the proper 
-                    levels in the terrarium. This kit also comes with a feeding dish and a complete how-to guide to make setup an easy 
-                    and hassle-free experience for you.
-                </p>
-                <p>
-                    <strong>Key Benefits</strong>
-                    This starter kit is perfect for a first-time small reptile parent and comes with an easy-to-use setup guide.
-                    You can fill the terrarium with up to 5 inches of water!
-                    Suitable for tree frogs, crested geckos and other small tropical, tree-living reptiles.
-                    The tall terrarium features a front door and a hinged screen top so you can easily access your pet from more than one place.
-                    The front door has a locking latch and a locking pin to help keep your pet in his own space.
-                </p>
-            </div>
-            <div class="col-2"></div>
-        </div>
+            // row #2
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-sm">';
+            echo '<img src="'.$row['image_url'].'" class="large-image"/>';
+            echo '</div>';
+            echo '<div class="col-sm">';
+            echo '<h3 id="product-description">'.$row['name'].'</h3>';
+            echo '<h3 id="product-price">$'.$row['price'].'</h3>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+            // row #3
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-8">';
+            echo '<p><strong>Description</strong><br/>'.$row['summary'].'</p>';
+            echo '<p><strong>Key Benefits</strong><br/>'.$row['information'].'</p>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+        ?>
 
         <!-- row #1 -->
         <div class="row pt-2">
@@ -91,7 +82,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="product-identifier">Product ID Number#</label>
-                            <label id="product-id-num" for="product-identifier">1000123459</label>
+                            <label id="product-id-num" for="product-identifier">1000000009</label>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>

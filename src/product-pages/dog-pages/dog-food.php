@@ -31,38 +31,37 @@
             <div class="col-2"></div>
         </div>
 
-        <!-- row #2 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-sm">
-                <img src="../../../assets/adult-dog-food.jpg" class="large-image"/>
-            </div>
-            <div class="col-sm">
-                <h3 id="product-description">PEDIGREE® Dry Dog Food Adult Roasted Chicken, Rice & Vegetable Flavor 17-lb bag</h3>
-                <h3 id="product-price">$29.99</h3>
-            </div>
-            <div class="col-2"></div>
-        </div>
+        <?php
+            require_once "../../DBConnect.php";
+            $pdo = connect();
+            $data = $pdo->query("select * from product where id = 1000000004;")->fetchAll();
+            foreach ($data as $row) {
+            }
 
-        <!-- row #3 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <p>
-                    <strong>Description</strong>
-                    Help your four-legged friend live life to the fullest with Pedigree Adult Complete Nutrition Roasted Chicken, Rice & Vegetable Flavor Dry Dog Food. Formulated to give dogs all the energy and nourishment they need to thrive, this food is packed with essential nutrition and a delicious roasted chicken flavor. Including B vitamins, zinc and omega-6 fatty acid to keep him looking great, it also contains leading levels of the antioxidant vitamin E to help keep his immune systems strong. Plus, this balanced dog food features a special fiber blend, which helps promote healthy digestion—and helps keep yard patrol under control.
-                </p>
-                <p>
-                    <strong>Key Benefits</strong>
-                    Complete and balanced nutrition has antioxidants, vitamins and minerals to help maintain a healthy lifestyle.
-                    Optimal levels of omega-6 fatty acid nourish the skin and help keep his coat shiny and healthy.
-                    Whole grains and a special fiber blend support healthy digestion with a delicious roasted chicken flavor.
-                    Unique, crunchy texture helps clean the teeth with every bite to support good oral health between brushings.
-                    Proudly made in the USA with the world’s finest ingredients; contains no high fructose corn syrup, artificial flavors or sugar.
-                </p>
-            </div>
-            <div class="col-2"></div>
-        </div>
+            // row #2
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-sm">';
+            echo '<img src="'.$row['image_url'].'" class="large-image"/>';
+            echo '</div>';
+            echo '<div class="col-sm">';
+            echo '<h3 id="product-description">'.$row['name'].'</h3>';
+            echo '<h3 id="product-price">$'.$row['price'].'</h3>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+            // row #3
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-8">';
+            echo '<p><strong>Description</strong><br/>'.$row['summary'].'</p>';
+            echo '<p><strong>Key Benefits</strong><br/>'.$row['information'].'</p>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+        ?>
 
         <!-- row #1 -->
         <div class="row pt-2">

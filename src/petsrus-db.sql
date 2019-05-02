@@ -4,7 +4,7 @@ USE petsrus;
 
 CREATE TABLE Product(
 id INTEGER(10),
-name varchar(100),
+name varchar(300),
 price DECIMAL(65, 2), 
 type ENUM ('food', 'toy', 'other') NOT NULL,  
 category ENUM ('dog', 'cat', 'reptile') NOT NULL,  	
