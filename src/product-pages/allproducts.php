@@ -8,27 +8,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="products.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../assets/favicon.ico" />
+    <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script type="text/javascript" src="products.js"></script>
     <title>Products</title>
   </head>
   <body>
 
-    <!-- nav bar -->
+    <!-- navigation bar -->
     <div class="navbar2">
-        <a href="../index.html">Home</a>
-        <a href="../about.html">About</a>
-        <div class="dropdown2">
-
-            <button class="dropbtn2">Products 
-                <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content2">
-            <a href="allproducts.html">All</a>
-            <a href="dog.html">Dogs</a>
-            <a href="cat.html">Cats</a>
-            <a href="reptile.html">Reptiles</a>
-            </div>
-        </div> 
+        <?php
+            include 'product_nav.php';
+        ?>
     </div>
 
     <!-- container -->

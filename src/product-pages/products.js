@@ -241,25 +241,25 @@ function handleClick(element)
     console.log(element);
 
     /* switch to main pet page */
-    if (element == 'dog') window.location.href = "dog.html";
-    else if (element == 'cat') window.location.href = "cat.html";
-    else if (element == 'reptile') window.location.href = "reptile.html";
+    if (element == 'dog') window.location.href = "dog.php";
+    else if (element == 'cat') window.location.href = "cat.php";
+    else if (element == 'reptile') window.location.href = "reptile.php";
 
     /* switch to dog pages */
-    else if (element == 'dog-food') window.location.href = "dog-pages/dog-food.php";
-    else if (element == 'dog-toy') window.location.href = "dog-pages/dog-toy.php";
-    else if (element == 'dog-harness') window.location.href = "dog-pages/dog-harness.php";
-    else if (element == 'dog-treat') window.location.href = "dog-pages/dog-treat.php";
+    else if (element == 1000000004) window.location.href = "dog-pages/dog-food.php";
+    else if (element == 1000000006) window.location.href = "dog-pages/dog-toy.php";
+    else if (element == 1000000005) window.location.href = "dog-pages/dog-harness.php";
+    else if (element == 1000000007) window.location.href = "dog-pages/dog-treat.php";
 
     /* switch to cat pages */
-    else if (element == 'cat-food') window.location.href = "cat-pages/cat-food.php";
-    else if (element == 'cat-playground') window.location.href = "cat-pages/cat-playground.php";
-    else if (element == 'cat-carrier') window.location.href = "cat-pages/cat-carrier.php";
+    else if (element == 1000000002) window.location.href = "cat-pages/cat-food.php";
+    else if (element == 1000000003) window.location.href = "cat-pages/cat-playground.php";
+    else if (element == 1000000001) window.location.href = "cat-pages/cat-carrier.php";
 
     /* switch to reptile pages */
-    else if (element == 'reptile-food') window.location.href = "reptile-pages/reptile-food.php";
-    else if (element == 'reptile-habitat') window.location.href = "reptile-pages/reptile-habitat.php";
-    else if (element == 'reptile-meds') window.location.href = "reptile-pages/reptile-meds.php";
+    else if (element == 1000000008) window.location.href = "reptile-pages/reptile-food.php";
+    else if (element == 1000000009) window.location.href = "reptile-pages/reptile-habitat.php";
+    else if (element == 1000000010) window.location.href = "reptile-pages/reptile-meds.php";
     
     /* else */
     // window.location.href = "../error-page.html";

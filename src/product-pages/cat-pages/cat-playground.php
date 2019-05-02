@@ -14,7 +14,7 @@
   </head>
   <body>
 
-    <!-- navigationbar -->
+    <!-- navigation bar -->
     <div class="navbar2">
         <?php
             include 'cat_nav.php';
