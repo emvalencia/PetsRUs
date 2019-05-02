@@ -40,6 +40,30 @@ function updateAllStylings(element)
         adjustPhoneInputStyles();
     else if(element == 'email-address')
         adjustEmailStyles();
+    else if(element == 'quantity')
+    {
+        if(isNaN(document.forms['submit-order-form']['quantity'].value))
+        {
+            document.getElementById(element).classList.add('is-invalid');
+        }
+        else
+        {
+            document.getElementById(element).classList.remove('is-invalid');
+            document.getElementById(element).classList.add('is-valid');
+        }
+    }
+    else if(element == 'csc')
+    {
+        if(isNaN(document.forms['submit-order-form']['csc'].value) || document.forms['submit-order-form']['csc'].value.length != 3)
+        {
+            document.getElementById(element).classList.add('is-invalid');
+        }
+        else
+        {
+            document.getElementById(element).classList.remove('is-invalid');
+            document.getElementById(element).classList.add('is-valid');
+        }
+    }
     else
     {
         if(!document.forms['submit-order-form'][element].checkValidity())
@@ -77,7 +101,7 @@ function check_fields_populated()
         return;
     }
     
-    if(isNaN(document.forms['submit-order-form']['csc'].value || document.forms['submit-order-form']['csc'].value.length != 3))
+    if(isNaN(document.forms['submit-order-form']['csc'].value) || document.forms['submit-order-form']['csc'].value.length != 3)
     {
         this.all_fields_populated = false;
         return;
