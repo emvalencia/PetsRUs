@@ -10,8 +10,9 @@ type ENUM ('food', 'toy', 'other') NOT NULL,
 category ENUM ('dog', 'cat', 'reptile') NOT NULL,  	
 page_url varchar(200),
 image_url varchar(200),
-summary varchar(3000),
-information varchar(3000),
+summary varchar(1500),
+description varchar(3000),
+benefits varchar(3000),
 PRIMARY KEY (id)
 );
 

@@ -42,7 +42,7 @@
             echo '<div class="row pt-2">';
             echo '<div class="col-2"></div>';
             echo '<div class="col-sm">';
-            echo '<img src="'.$row['image_url'].'" class="large-image"/>';
+            echo '<img src="../../../assets/'.$row['image_url'].'" class="large-image"/>';
             echo '</div>';
             echo '<div class="col-sm">';
             echo '<h3 id="product-description">'.$row['name'].'</h3>';
@@ -55,8 +55,8 @@
             echo '<div class="row pt-2">';
             echo '<div class="col-2"></div>';
             echo '<div class="col-8">';
-            echo '<p><strong>Description</strong><br/>'.$row['summary'].'</p>';
-            echo '<p><strong>Key Benefits</strong><br/>'.$row['information'].'</p>';
+            echo '<p><strong>Description</strong><br/>'.$row['description'].'</p>';
+            echo '<p><strong>Key Benefits</strong><br/>'.$row['benefits'].'</p>';
             echo '</div>';
             echo '<div class="col-2"></div>';
             echo '</div>';
@@ -81,7 +81,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="product-identifier">Product ID Number#</label>
-                            <label id="product-id-num" for="product-identifier">1000123459</label>
+                            <label id="product-id-num" for="product-identifier">1000000004</label>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>
