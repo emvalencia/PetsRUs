@@ -4,15 +4,15 @@ USE petsrus;
 
 CREATE TABLE Product(
 id INTEGER(10),
-name varchar(50),
+name varchar(100),
 price DECIMAL(65, 2), 
 type ENUM ('food', 'toy', 'other') NOT NULL,  
 category ENUM ('dog', 'cat', 'reptile') NOT NULL,  	
-page_url varchar(80),
-image_url varchar(80),
-summary varchar(300),
+page_url varchar(200),
+image_url varchar(200),
+summary varchar(3000),
 information varchar(3000),
-	PRIMARY KEY (id)
+PRIMARY KEY (id)
 );
 
 CREATE TABLE OrderDetails(

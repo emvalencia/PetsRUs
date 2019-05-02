@@ -36,6 +36,26 @@
             }
         }
     }
+
+    if (isset($_POST["import-inventory"])) {
+    
+        $fileName = $_FILES["file3"]["tmp_name"];
+        
+        if ($_FILES["file3"]["size"] > 0) {
+            
+            $file = fopen($fileName, "r");
+            
+            while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {
+
+                $sqlInsert = "INSERT into Product (id, name, price, type, category, page_url, image_url, summary, information)
+                       values ('" . $column[0] . "','" . $column[1] . "','" . $column[2] . "','".$column[3]."','".$column[4]."','".$column[5]."','".$column[6]."','".$column[7]."','".$column[8]."')";
+                
+                // echo $sqlInsert . "<br/>";
+
+                $pdo->exec($sqlInsert);
+            }
+        }
+    }
 ?>
 
 
@@ -72,6 +92,17 @@
                         <br/>
                     </div>
                 </form>
+                <br/>
+
+                <form class="form-horizontal" action="" method="post" name="uploadCSV3" enctype="multipart/form-data">
+                    <div class="input-row">
+                        <label class="col-md-4 control-label">Insert into Product Table</label> 
+                        <input type="file" name="file3" id="file3" accept=".csv">
+                        <button type="submit" id="submit3" name="import-inventory" class="btn-primary">Import</button>
+                        <br/>
+                    </div>
+                </form>
+
             </div>
             <div class="col-3"></div>
         </div>
