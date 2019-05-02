@@ -32,43 +32,37 @@
             <div class="col-2"></div>
         </div>
 
-        <!-- row #2 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-sm">
-                <img src="../../../assets/reptile-food.jpg" class="large-image"/>
-            </div>
-            <div class="col-sm">
-                <h3 id="product-description">Zilla Reptile Munchies Vegetable Mix Lizard Food, 4-oz bag</h3>
-                <h3 id="product-price">$19.99</h3>
-                <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
-            </div>
-            <div class="col-2"></div>
-        </div>
+        <?php
+            require_once "../../DBConnect.php";
+            $pdo = connect();
+            $data = $pdo->query("select * from product where id = 1000000008;")->fetchAll();
+            foreach ($data as $row) {
+            }
 
-        <!-- row #3 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <p>
-                    <strong>Description</strong>
-                    Zilla Reptile Munchies Vegetable Mix Lizard Food is a convenient way to give your pet lizard a specially 
-                    formulated herbivore diet without a lot of preparation. A variety of all-natural ingredients like sun-dried 
-                    bok choy, carrots, green beans, peas and zucchini quickly rehydrate for a food that maintains all its vital 
-                    nutrients and vitamins. This delicious veggie blend can be added to your pet's daily diet of leafy greens or 
-                    pellets or on its own for a tasty treat.
-                </p>
-                <p>
-                    <strong>Key Benefits</strong>
-                    Comes in a convenient, resealable package and is easy to prepare by simply rehydrating in water
-                    Provides essential vitamins and nutrients from all natural ingredients like bok choy, sun-cured carrots and dehydrated zucchini
-                    Ideal for herbivorous reptiles such as uromastyx, iguanas and tortoises
-                    Feed as a treat or with other diets
-                    Nutritious, dehydrated ingredients that are quick and convenient - no refrigeration required!
-                </p>
-            </div>
-            <div class="col-2"></div>
-        </div>
+            // row #2
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-sm">';
+            echo '<img src="'.$row['image_url'].'" class="large-image"/>';
+            echo '</div>';
+            echo '<div class="col-sm">';
+            echo '<h3 id="product-description">'.$row['name'].'</h3>';
+            echo '<h3 id="product-price">$'.$row['price'].'</h3>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+            // row #3
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-8">';
+            echo '<p><strong>Description</strong><br/>'.$row['summary'].'</p>';
+            echo '<p><strong>Key Benefits</strong><br/>'.$row['information'].'</p>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+        ?>
 
         <!-- row #1 -->
         <div class="row pt-2">
@@ -88,7 +82,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="product-identifier">Product ID Number#</label>
-                            <label id="product-id-num" for="product-identifier">1000123459</label>
+                            <label id="product-id-num" for="product-identifier">1000000008</label>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>

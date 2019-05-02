@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../products.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="../products.js"></script>
     <title>Dog Harness</title>
   </head>
@@ -31,45 +32,37 @@
             <div class="col-2"></div>
         </div>
 
-        <!-- row #2 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-sm">
-                <img src="../../../assets/dog-harness.jpg" class="large-image"/>
-            </div>
-            <div class="col-sm">
-                <h3 id="product-description">OneTigris Tactical Service Vest Dog Harness</h3>
-                <h3 id="product-price">$49.99</h3>
-                <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
-            </div>
-            <div class="col-2"></div>
-        </div>
+        <?php
+            require_once "../../DBConnect.php";
+            $pdo = connect();
+            $data = $pdo->query("select * from product where id = 1000000005;")->fetchAll();
+            foreach ($data as $row) {
+            }
 
-        <!-- row #3 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <p>
-                    <strong>Description</strong>
-                    The OneTigris Tactical Service Vest Dog Harness lets you get into the wild with your adventurous pup while keeping 
-                    her safe and comfortable. This durable, versatile harness is made with a heavy-duty nylon shell and soft interior 
-                    padding for lightweight, water-resistant comfort on any outing. Convenient MOLLE (Modular Lightweight Load-carrying 
-                    Equipment) webbing along both sides of the harness accepts a wide variety of molle pouches so your canine companion 
-                    can carry her own supplies. The fully adjustable neck and chest straps provide a snug, secure fit, while the fuzzy 
-                    fastener-style panels on all three sides allow you to attach an array of morale patches and badges to customize the 
-                    harness to fit your pup’s style and express her individual personality.
-                </p>
-                <p>
-                    <strong>Key Benefits</strong>
-                    Durable, versatile harness features a heavy-duty nylon shell and soft interior padding for lightweight, water-resistant comfort.
-                    Convenient MOLLE webbing along both sides of the harness accepts a wide variety of molle pouches to carry gear and supplies.
-                    Fully adjustable neck and chest straps provide a snug, secure fit; an extra-strong V-ring leash attachment provides added security.
-                    Also features a control loop at the front to bring her in close when needed, as well as a crisscross bungee strap for extra storage.
-                    Customize the harness to fit your dog’s style and personality with morale patches and badges; OneTigris patch is included with purchase.
-                </p>
-            </div>
-            <div class="col-2"></div>
-        </div>
+            // row #2
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-sm">';
+            echo '<img src="'.$row['image_url'].'" class="large-image"/>';
+            echo '</div>';
+            echo '<div class="col-sm">';
+            echo '<h3 id="product-description">'.$row['name'].'</h3>';
+            echo '<h3 id="product-price">$'.$row['price'].'</h3>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+            // row #3
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-8">';
+            echo '<p><strong>Description</strong><br/>'.$row['summary'].'</p>';
+            echo '<p><strong>Key Benefits</strong><br/>'.$row['information'].'</p>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+        ?>
 
         <!-- row #1 -->
         <div class="row pt-2">
@@ -89,7 +82,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="product-identifier">Product ID Number#</label>
-                            <label id="product-id-num" for="product-identifier">1000123459</label>
+                            <label id="product-id-num" for="product-identifier">1000000005</label>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>

@@ -8,6 +8,7 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../products.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="../products.js"></script>
     <title>Dog Treats</title>
   </head>
@@ -31,44 +32,37 @@
             <div class="col-2"></div>
         </div>
 
-        <!-- row #2 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-sm">
-                <img src="../../../assets/dog-treat.jpg" class="large-image"/>
-            </div>
-            <div class="col-sm">
-                <h3 id="product-description">American Journey Beef Jerky Grain-Free Dog Treats</h3>
-                <h3 id="product-price">$7.99</h3>
-                <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
-            </div>
-            <div class="col-2"></div>
-        </div>
+        <?php
+            require_once "../../DBConnect.php";
+            $pdo = connect();
+            $data = $pdo->query("select * from product where id = 1000000007;")->fetchAll();
+            foreach ($data as $row) {
+            }
 
-        <!-- row #3 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <p>
-                    <strong>Description</strong>
-                    American Journey Beef Jerky Dog Treats are grain-free, all-natural, delicious and made with wholesome ingredients 
-                    to fuel the entire pack. This high-protein jerky is crafted in the USA with carefully selected domestic and imported 
-                    ingredients, like mouthwatering real beef from American farms. It’s a simple recipe that starts with a single meat 
-                    protein and just two other all-natural ingredients for a flavor dogs instinctively crave. Instead of grains, this 
-                    meat-rich jerky delivers 38% protein, and no corn, wheat, soy, by-products or artificial colors, flavors or preservatives. 
-                    To ensure quality and safety, American Journey carefully selects ingredients from trusted sources.
-                </p>
-                <p>
-                    <strong>Key Benefits</strong>
-                    Grain-free, wholesome jerky treats with an enticing flavor that comes from real meat and the chewy texture of genuine jerky.
-                    High in protein with real beef as the first ingredient. This delicious treat delivers 38% protein and features a single source of animal protein.
-                    Crafted in the USA to ensure your dog is getting a safe, quality jerky made from carefully selected domestic and imported ingredients.
-                    All-natural recipe with only three total ingredients with no corn, wheat, soy, by-products or artificial colors, flavors or preservatives.
-                    This wholesome and tasty treat is made from real beef raised on American farms, so you know you’re getting a premium jerky your dog will love.
-                </p>
-            </div>
-            <div class="col-2"></div>
-        </div>
+            // row #2
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-sm">';
+            echo '<img src="'.$row['image_url'].'" class="large-image"/>';
+            echo '</div>';
+            echo '<div class="col-sm">';
+            echo '<h3 id="product-description">'.$row['name'].'</h3>';
+            echo '<h3 id="product-price">$'.$row['price'].'</h3>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+            // row #3
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-8">';
+            echo '<p><strong>Description</strong><br/>'.$row['summary'].'</p>';
+            echo '<p><strong>Key Benefits</strong><br/>'.$row['information'].'</p>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+        ?>
 
         <!-- row #1 -->
         <div class="row pt-2">
@@ -88,7 +82,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="product-identifier">Product ID Number#</label>
-                            <label id="product-id-num" for="product-identifier">1000123459</label>
+                            <label id="product-id-num" for="product-identifier">1000000007</label>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>
