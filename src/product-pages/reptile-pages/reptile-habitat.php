@@ -8,27 +8,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../products.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="../products.js"></script>
-    <title>Dog Food</title>
+    <title>Reptile Habitat</title>
   </head>
   <body>
 
-    <!-- nav bar -->
+    <!-- navigation bar -->
     <div class="navbar2">
-        <a href="../../index.html">Home</a>
-        <a href="../../about.html">About</a>
-        <div class="dropdown2">
-            <button class="dropbtn2">Products 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content2">
-            <a href="../allproducts.html">All</a>
-            <a href="../dog.html">Dogs</a>
-            <a href="../cat.html">Cats</a>
-            <a href="../reptile.html">Reptiles</a>
-            </div>
-        </div> 
-    </div>
+        <?php
+            include 'reptile_nav.php';
+        ?>
+    </div> 
 
     <div class="container-fluid">
 
@@ -36,7 +27,7 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-8 purple-header">
-                <h3 id="product-name">Petmate</h3>
+                <h3 id="product-name">Zilla</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -45,11 +36,11 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-sm">
-                <img src="../../../assets/cat-carrier.jpg" class="large-image"/>
+                <img src="../../../assets/reptile-habitat.jpg" class="large-image"/>
             </div>
             <div class="col-sm">
-                <h3 id="product-description">Petmate® Compass Fashion Pet Carrier</h3>
-                <h3 id="product-price">$29.99</h3>
+                <h3 id="product-description">Zilla Tropical Vertical Starter Kit with Mini Halogen Lighting</h3>
+                <h3 id="product-price">$84.99</h3>
                 <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
             </div>
             <div class="col-2"></div>
@@ -61,19 +52,22 @@
             <div class="col-8">
                 <p>
                     <strong>Description</strong>
-                    Redefine pet training and transportation with the Petmate Compass. This crate comes with a straightforward assembly 
-                    process that takes only seconds, so you waste less time setting up and more time getting out. It's the perfect 
-                    companion for traveling and potty training your new pup. With Petmate's Quick-Latch design, increased ventilation 
-                    and larger doorway size, the Compass combines the ultimate convenience for pet parents and extra comfort for pets. 
-                    Travel and train in style with a kennel that takes ingenuity to new heights.
+                    Zilla’s Tropical Vertical Starter Kit is specially designed for small, tropical tree-living reptiles like tree 
+                    frogs, house geckos, crested geckos and anoles. It comes with a 12” x 12” x 18” glass terrarium that features 
+                    a front door with a locking latch and pin for added safety, and a hinged screen top for easy access to your pet. 
+                    The included textured background and coconut husk bedding gives your sidekick a more rugged and realistic outdoor 
+                    feeling while the mini halogen dome and day blue 25w mini halogen bulb offer pinpointed light and heat to keep 
+                    him warm. Plus, the included humidity and temperature gauge provides an easy way for you to maintain the proper 
+                    levels in the terrarium. This kit also comes with a feeding dish and a complete how-to guide to make setup an easy 
+                    and hassle-free experience for you.
                 </p>
                 <p>
                     <strong>Key Benefits</strong>
-                    Quick Slide 'N Snap assembly allows quick assembly without tools.
-                    360-degree ventilation & visibility means a more comfortable journey for your pet.
-                    Additional doorway size for comfort.
-                    Meets most airlines requirements.
-                    Quick-Latch 2-Way door design opens left or right, and stays closed with safeguard door bars at top and bottom.
+                    This starter kit is perfect for a first-time small reptile parent and comes with an easy-to-use setup guide.
+                    You can fill the terrarium with up to 5 inches of water!
+                    Suitable for tree frogs, crested geckos and other small tropical, tree-living reptiles.
+                    The tall terrarium features a front door and a hinged screen top so you can easily access your pet from more than one place.
+                    The front door has a locking latch and a locking pin to help keep your pet in his own space.
                 </p>
             </div>
             <div class="col-2"></div>

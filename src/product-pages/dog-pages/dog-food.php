@@ -9,26 +9,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
     <script src="../products.js"></script>
-    <title>Dog Toy</title>
+    <title>Dog Food</title>
   </head>
   <body>
 
-    <!-- nav bar -->
+    <!-- navigation bar -->
     <div class="navbar2">
-        <a href="../../index.html">Home</a>
-        <a href="../../about.html">About</a>
-        <div class="dropdown2">
-            <button class="dropbtn2">Products 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content2">
-            <a href="../allproducts.html">All</a>
-            <a href="../dog.html">Dogs</a>
-            <a href="../cat.html">Cats</a>
-            <a href="../reptile.html">Reptiles</a>
-            </div>
-        </div> 
-    </div>
+        <?php
+            include 'dog_nav.php';
+        ?>
+    </div> 
 
     <div class="container-fluid">
 
@@ -36,7 +26,7 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-8 purple-header">
-                <h3 id="product-name">American Journey</h3>
+                <h3 id="product-name">Pedigree</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -45,12 +35,11 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-sm">
-                <img src="../../../assets/dog-treat.jpg" class="large-image"/>
+                <img src="../../../assets/adult-dog-food.jpg" class="large-image"/>
             </div>
             <div class="col-sm">
-                <h3 id="product-description">American Journey Beef Jerky Grain-Free Dog Treats</h3>
-                <h3 id="product-price">$7.99</h3>
-                <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
+                <h3 id="product-description">PEDIGREE® Dry Dog Food Adult Roasted Chicken, Rice & Vegetable Flavor 17-lb bag</h3>
+                <h3 id="product-price">$29.99</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -61,20 +50,15 @@
             <div class="col-8">
                 <p>
                     <strong>Description</strong>
-                    American Journey Beef Jerky Dog Treats are grain-free, all-natural, delicious and made with wholesome ingredients 
-                    to fuel the entire pack. This high-protein jerky is crafted in the USA with carefully selected domestic and imported 
-                    ingredients, like mouthwatering real beef from American farms. It’s a simple recipe that starts with a single meat 
-                    protein and just two other all-natural ingredients for a flavor dogs instinctively crave. Instead of grains, this 
-                    meat-rich jerky delivers 38% protein, and no corn, wheat, soy, by-products or artificial colors, flavors or preservatives. 
-                    To ensure quality and safety, American Journey carefully selects ingredients from trusted sources.
+                    Help your four-legged friend live life to the fullest with Pedigree Adult Complete Nutrition Roasted Chicken, Rice & Vegetable Flavor Dry Dog Food. Formulated to give dogs all the energy and nourishment they need to thrive, this food is packed with essential nutrition and a delicious roasted chicken flavor. Including B vitamins, zinc and omega-6 fatty acid to keep him looking great, it also contains leading levels of the antioxidant vitamin E to help keep his immune systems strong. Plus, this balanced dog food features a special fiber blend, which helps promote healthy digestion—and helps keep yard patrol under control.
                 </p>
                 <p>
                     <strong>Key Benefits</strong>
-                    Grain-free, wholesome jerky treats with an enticing flavor that comes from real meat and the chewy texture of genuine jerky.
-                    High in protein with real beef as the first ingredient. This delicious treat delivers 38% protein and features a single source of animal protein.
-                    Crafted in the USA to ensure your dog is getting a safe, quality jerky made from carefully selected domestic and imported ingredients.
-                    All-natural recipe with only three total ingredients with no corn, wheat, soy, by-products or artificial colors, flavors or preservatives.
-                    This wholesome and tasty treat is made from real beef raised on American farms, so you know you’re getting a premium jerky your dog will love.
+                    Complete and balanced nutrition has antioxidants, vitamins and minerals to help maintain a healthy lifestyle.
+                    Optimal levels of omega-6 fatty acid nourish the skin and help keep his coat shiny and healthy.
+                    Whole grains and a special fiber blend support healthy digestion with a delicious roasted chicken flavor.
+                    Unique, crunchy texture helps clean the teeth with every bite to support good oral health between brushings.
+                    Proudly made in the USA with the world’s finest ingredients; contains no high fructose corn syrup, artificial flavors or sugar.
                 </p>
             </div>
             <div class="col-2"></div>
@@ -226,6 +210,7 @@
           }, false);
         })();
         </script>
+    
     </div>
 
     <!-- Optional JavaScript -->

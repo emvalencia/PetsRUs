@@ -9,26 +9,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
     <script src="../products.js"></script>
-    <title>Dog Food</title>
+    <title>Dog Harness</title>
   </head>
   <body>
 
-    <!-- nav bar -->
+    <!-- navigation bar -->
     <div class="navbar2">
-        <a href="../../index.html">Home</a>
-        <a href="../../about.html">About</a>
-        <div class="dropdown2">
-            <button class="dropbtn2">Products 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content2">
-            <a href="../allproducts.html">All</a>
-            <a href="../dog.html">Dogs</a>
-            <a href="../cat.html">Cats</a>
-            <a href="../reptile.html">Reptiles</a>
-            </div>
-        </div> 
-    </div>
+        <?php
+            include 'dog_nav.php';
+        ?>
+    </div> 
 
     <div class="container-fluid">
 
@@ -36,7 +26,7 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-8 purple-header">
-                <h3 id="product-name">Purina</h3>
+                <h3 id="product-name">OneTigris</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -45,11 +35,11 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-sm">
-                <img src="../../../assets/adult-cat-food.jpg" class="large-image"/>
+                <img src="../../../assets/dog-harness.jpg" class="large-image"/>
             </div>
             <div class="col-sm">
-                <h3 id="product-description">Purina ONE® Tender Selects Blend With Real Chicken Cat Food 22-lb bag</h3>
-                <h3 id="product-price">$24.99</h3>
+                <h3 id="product-description">OneTigris Tactical Service Vest Dog Harness</h3>
+                <h3 id="product-price">$49.99</h3>
                 <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
             </div>
             <div class="col-2"></div>
@@ -61,20 +51,21 @@
             <div class="col-8">
                 <p>
                     <strong>Description</strong>
-                    Give your kitty the best of both worlds with the Purina ONE Tender Selects Blend with Real Chicken Dry Cat Food. 
-                    Every cup is loaded with deliciously crunchy bites and meaty tender morsels, with real chicken as the first 
-                    ingredient for lean protein to support healthy muscles and energy. This vet-recommended formula for adult cats is 
-                    made with no fillers―only ingredients that have purpose―like essential vitamins, minerals and taurine for overall 
-                    health and omega-6 fatty acids for a healthy skin and soft coat. Purina provides a complete and balanced diet and 
-                    a taste that will have your furry friend purring with delight with every single bite!
+                    The OneTigris Tactical Service Vest Dog Harness lets you get into the wild with your adventurous pup while keeping 
+                    her safe and comfortable. This durable, versatile harness is made with a heavy-duty nylon shell and soft interior 
+                    padding for lightweight, water-resistant comfort on any outing. Convenient MOLLE (Modular Lightweight Load-carrying 
+                    Equipment) webbing along both sides of the harness accepts a wide variety of molle pouches so your canine companion 
+                    can carry her own supplies. The fully adjustable neck and chest straps provide a snug, secure fit, while the fuzzy 
+                    fastener-style panels on all three sides allow you to attach an array of morale patches and badges to customize the 
+                    harness to fit your pup’s style and express her individual personality.
                 </p>
                 <p>
                     <strong>Key Benefits</strong>
-                    Made with real chicken as the first ingredient for high-quality lean protein to support healthy muscles and energy of your adult cat.
-                    Veterinarian recommended formula combines crunchy bites and tender morsels for the variety cats love.
-                    Provides 100% balanced nutrition in every bowl with vitamins, minerals, and taurine for overall well-being, plus omegas for a healthy skin and coat.
-                    Fun-shaped kibble has a crunchy texture that helps scrub tartar with every bite to keep teeth clean and healthy.
-                    Proudly made in Purina-owned facilities in the USA with no fillers so each ingredient has a purpose.
+                    Durable, versatile harness features a heavy-duty nylon shell and soft interior padding for lightweight, water-resistant comfort.
+                    Convenient MOLLE webbing along both sides of the harness accepts a wide variety of molle pouches to carry gear and supplies.
+                    Fully adjustable neck and chest straps provide a snug, secure fit; an extra-strong V-ring leash attachment provides added security.
+                    Also features a control loop at the front to bring her in close when needed, as well as a crisscross bungee strap for extra storage.
+                    Customize the harness to fit your dog’s style and personality with morale patches and badges; OneTigris patch is included with purchase.
                 </p>
             </div>
             <div class="col-2"></div>

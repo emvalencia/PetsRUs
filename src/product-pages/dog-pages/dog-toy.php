@@ -9,26 +9,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
     <script src="../products.js"></script>
-    <title>Dog Food</title>
+    <title>Dog Toy</title>
   </head>
   <body>
 
-    <!-- nav bar -->
+    <!-- navigation bar -->
     <div class="navbar2">
-        <a href="../../index.html">Home</a>
-        <a href="../../about.html">About</a>
-        <div class="dropdown2">
-            <button class="dropbtn2">Products 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content2">
-            <a href="../allproducts.html">All</a>
-            <a href="../dog.html">Dogs</a>
-            <a href="../cat.html">Cats</a>
-            <a href="../reptile.html">Reptiles</a>
-            </div>
-        </div> 
-    </div>
+        <?php
+            include 'dog_nav.php';
+        ?>
+    </div> 
 
     <div class="container-fluid">
 
@@ -36,7 +26,7 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-8 purple-header">
-                <h3 id="product-name">Zilla</h3>
+                <h3 id="product-name">ZippyPaws</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -45,11 +35,11 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-sm">
-                <img src="../../../assets/reptile-food.jpg" class="large-image"/>
+                <img src="../../../assets/dog-toys.jpg" class="large-image"/>
             </div>
             <div class="col-sm">
-                <h3 id="product-description">Zilla Reptile Munchies Vegetable Mix Lizard Food, 4-oz bag</h3>
-                <h3 id="product-price">$19.99</h3>
+                <h3 id="product-description">ZippyPaws Skinny Peltz No Stuffing Squeaky Plush Dog Toys, 3-pack, Large</h3>
+                <h3 id="product-price">$12.99</h3>
                 <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
             </div>
             <div class="col-2"></div>
@@ -61,19 +51,17 @@
             <div class="col-8">
                 <p>
                     <strong>Description</strong>
-                    Zilla Reptile Munchies Vegetable Mix Lizard Food is a convenient way to give your pet lizard a specially 
-                    formulated herbivore diet without a lot of preparation. A variety of all-natural ingredients like sun-dried 
-                    bok choy, carrots, green beans, peas and zucchini quickly rehydrate for a food that maintains all its vital 
-                    nutrients and vitamins. This delicious veggie blend can be added to your pet's daily diet of leafy greens or 
-                    pellets or on its own for a tasty treat.
+                    ZippyPaws Skinny Peltz No Stuffing Squeaky Plush Dog Toys feature three cute woodland-creature designs. 
+                    This set includes a fox, a raccoon and a squirrel, and each large plush toy is filled with two round squeakers 
+                    for hours of squeaking action. These fun toys are designed for medium-sized dogs who love to squeak — with no 
+                    stuffing to ensure they last longer with less mess.
                 </p>
                 <p>
                     <strong>Key Benefits</strong>
-                    Comes in a convenient, resealable package and is easy to prepare by simply rehydrating in water
-                    Provides essential vitamins and nutrients from all natural ingredients like bok choy, sun-cured carrots and dehydrated zucchini
-                    Ideal for herbivorous reptiles such as uromastyx, iguanas and tortoises
-                    Feed as a treat or with other diets
-                    Nutritious, dehydrated ingredients that are quick and convenient - no refrigeration required!
+                    Recommended for medium-sized dogs. Every dog plays differently and, since not all toys are created equal, it’s 
+                    always best to keep a close watch on your pup in case things get ruff. Supervised play will help toys last longer 
+                    and most importantly keep your pal safe. No dog toy is truly indestructible, so always remove the toy from playtime 
+                    if pieces begin to break off.
                 </p>
             </div>
             <div class="col-2"></div>
