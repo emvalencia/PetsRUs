@@ -47,111 +47,24 @@
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <th scope="row"><img src="../../assets/adult-dog-food.jpg" onclick="handleClick('dog-food')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">PEDIGREE® Dry Dog Food Adult Roasted Chicken, Rice & Vegetable Flavor 17-lb bag</div>
-                            <p>This chicken-flavor dog food is packed with B vitamins, zinc and omega-6 fatty acid to help keep adult dogs 
-                                looking their best. Now with no high fructose corn syrup, no artificial flavors, and no added sugar.</p>
-                            <div class="price">$29.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('dog-food')">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/dog-toys.jpg" onclick="handleClick('dog-toy')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">ZippyPaws Skinny Peltz No Stuffing Squeaky Plush Dog Toys, 3-pack, Large</div>
-                            <p>This fun-filled package contains 3 adorable woodland creates and 3 high-quality round squeakers to deliver 
-                                more sound to your best friend! Each plush is 18-inches long, the perfect size for medium dogs.</p>
-                            <div class="price">$12.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('dog-toy')">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/dog-harness.jpg" onclick="handleClick('dog-harness')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">OneTigris Tactical Service Vest Dog Harness</div>
-                            <p>This harness is made with durable and soft 1000D nylon and has extra padding in all pressure areas for 
-                                    a comfortable fit. It is easily adjustable with 4 quick release buttons and comes in 4 different colors
-                                    (black, brown, grey, and camoflauge). This product is perfect for medium or large-sized dogs!</p>
-                            <div class="price">$49.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('dog-harness')" class="product-img">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/dog-treat.jpg" onclick="handleClick('dog-treat')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">American Journey Beef Jerky Grain-Free Dog Treats</div>
-                            <p>The best dog jerky treats around! American Journey Beef Jerky is all beef, with no added grains. We know
-                                    that you want the best for your pooch, and so do we. This is why our ingredients are all-natural and packed
-                                    with 38% protein!</p>
-                            <div class="price">$7.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('dog-treat')">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/adult-cat-food.jpg" alt="cat-food" onclick="handleClick('cat-food')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">Purina ONE® Tender Selects Blend With Real Chicken Cat Food 22-lb bag</div>
-                            <p>Purina's Tender Selects Blend is a vet-recommended nutritious meal for your beloved cat. Each bite is filled 
-                                with essential vitamins, minerals, and taurine to provide a well-balanced diet and promote a healthy skin and 
-                                coat.</p>
-                            <div class="price">$24.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('cat-food')">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/cat-playground.jpg" alt="cat-playground" onclick="handleClick('cat-playground')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">Frisco 72-in Cat Tree</div>
-                            <p>This 72-inch tall cream-colored cat tree is the ultimate all-in one spot for your kitty! The tree comes with 10 scratching posts
-                                    and two scratch board ramps. It is covered with a soft, plush fabric and is purrfect for multi-cat households. </p>
-                            <div class="price">$69.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('cat-playground')">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/cat-carrier.jpg" alt="cat-carrier" onclick="handleClick('cat-carrier')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">Petmate® Compass Fashion Pet Carrier</div>
-                            <p>The Petmate cat carrier comes in a bright hot pink color and is perfect for most cat sizes! It has Quick Slide
-                                'N Snap technology that allows for easy assembly. It also provides 360-degree ventilation and has a Quick-Latch-2-way door.</p>
-                            <div class="price">$29.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('cat-carrier')">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/reptile-food.jpg" alt="reptile-food" onclick="handleClick('reptile-food')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">Zilla Reptile Munchies Vegetable Mix Lizard Food, 4-oz bag</div>
-                            <p>Zilla Reptile Munchies is a tasty and healthy treat for your reptile friend filled with all-natural ingredients.
-                                Each bite is packed with sun-dried bok choy, carrots, green beans, peas, and zucchini, making for the perfect
-                                healthy treat!</p>
-                            <div class="price">$19.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('reptile-food')">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/reptile-habitat.jpg" alt="reptile-habitat" onclick="handleClick('reptile-habitat')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">Zilla Tropical Vertical Starter Kit with Mini Halogen Lighting</div>
-                            <p>Zilla’s Tropical Vertical Starter Kit is specially designed for small, tropical tree-living reptiles like tree 
-                                    frogs, house geckos, crested geckos and anoles. It comes with a 12” x 12” x 18” glass terrarium that features a 
-                                    front door with a locking latch and pin for added safety, and a hinged screen top for easy access to your pet.</p>
-                            <div class="price">$84.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('reptile-habitat')">More Info</button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <th scope="row"><img src="../../assets/reptile-meds.jpg" alt="reptile-meds" onclick="handleClick('reptile-meds')" class="product-img"/></th>
-                        <td class="text">
-                            <div class="product-title">Fluker's Repta Boost Insectivore/Carnivore High Amp Boost Reptile Supplement, 1.8-oz</div>
-                            <p>This high-energy supplement is specially formulated to provide "that extra energy boost" for recently acquired animals, 
-                                    young fast-growing animals, reproductively active animals or animals on limited diets.</p>
-                            <div class="price">$8.99</div>
-                            <button type="button" class="btn btn-secondary btn-md" onclick="handleClick('reptile-meds')">More Info</button>
-                        </td>
-                    </tr>
+                      <?php
+                        require_once "../DBConnect.php";
+                        $pdo = connect();
+                        $data = $pdo->query("select * from product where id >= 1000000001 and id < 10000000011;")->fetchAll();
+                        $len = count($data);
+
+                        for($x = 0; $x < $len; $x++) {
+                            echo '<tr>';
+                            echo '<th scope="row"><img src="../../assets/'.$data[$x]['image_url'].'" alt="cat-food" onclick="handleClick('.$data[$x]['id'].')" class="product-img"/></th>';
+                            echo '<td class="text">';
+                            echo '<div class="product-title">'.$data[$x]['name'].'</div>';
+                            echo '<p>'.$data[$x]['summary'].'</p>';
+                            echo '<div class="price">$'.$data[$x]['price'].'</div>';
+                            echo '<button type="button" class="btn btn-secondary btn-md" onclick="handleClick('.$data[$x]['id'].')">More Info</button>';
+                            echo '</td>';
+                            echo '</tr>';
+                        }
+                    ?>
                 </tbody>
             </table>
             </div>
