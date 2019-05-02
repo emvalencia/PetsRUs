@@ -8,27 +8,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../products.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="../products.js"></script>
-    <title>Dog Food</title>
+    <title>Reptile Food</title>
   </head>
   <body>
 
-    <!-- nav bar -->
+    <!-- navigation bar -->
     <div class="navbar2">
-        <a href="../../index.html">Home</a>
-        <a href="../../about.html">About</a>
-        <div class="dropdown2">
-            <button class="dropbtn2">Products 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content2">
-            <a href="../allproducts.html">All</a>
-            <a href="../dog.html">Dogs</a>
-            <a href="../cat.html">Cats</a>
-            <a href="../reptile.html">Reptiles</a>
-            </div>
-        </div> 
-    </div>
+        <?php
+            include 'reptile_nav.php';
+        ?>
+    </div> 
 
     <div class="container-fluid">
 
@@ -36,7 +27,7 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-8 purple-header">
-                <h3 id="product-name">Pedigree</h3>
+                <h3 id="product-name">Zilla</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -45,11 +36,12 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-sm">
-                <img src="../../../assets/adult-dog-food.jpg" class="large-image"/>
+                <img src="../../../assets/reptile-food.jpg" class="large-image"/>
             </div>
             <div class="col-sm">
-                <h3 id="product-description">PEDIGREE® Dry Dog Food Adult Roasted Chicken, Rice & Vegetable Flavor 17-lb bag</h3>
-                <h3 id="product-price">$29.99</h3>
+                <h3 id="product-description">Zilla Reptile Munchies Vegetable Mix Lizard Food, 4-oz bag</h3>
+                <h3 id="product-price">$19.99</h3>
+                <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
             </div>
             <div class="col-2"></div>
         </div>
@@ -60,15 +52,19 @@
             <div class="col-8">
                 <p>
                     <strong>Description</strong>
-                    Help your four-legged friend live life to the fullest with Pedigree Adult Complete Nutrition Roasted Chicken, Rice & Vegetable Flavor Dry Dog Food. Formulated to give dogs all the energy and nourishment they need to thrive, this food is packed with essential nutrition and a delicious roasted chicken flavor. Including B vitamins, zinc and omega-6 fatty acid to keep him looking great, it also contains leading levels of the antioxidant vitamin E to help keep his immune systems strong. Plus, this balanced dog food features a special fiber blend, which helps promote healthy digestion—and helps keep yard patrol under control.
+                    Zilla Reptile Munchies Vegetable Mix Lizard Food is a convenient way to give your pet lizard a specially 
+                    formulated herbivore diet without a lot of preparation. A variety of all-natural ingredients like sun-dried 
+                    bok choy, carrots, green beans, peas and zucchini quickly rehydrate for a food that maintains all its vital 
+                    nutrients and vitamins. This delicious veggie blend can be added to your pet's daily diet of leafy greens or 
+                    pellets or on its own for a tasty treat.
                 </p>
                 <p>
                     <strong>Key Benefits</strong>
-                    Complete and balanced nutrition has antioxidants, vitamins and minerals to help maintain a healthy lifestyle.
-                    Optimal levels of omega-6 fatty acid nourish the skin and help keep his coat shiny and healthy.
-                    Whole grains and a special fiber blend support healthy digestion with a delicious roasted chicken flavor.
-                    Unique, crunchy texture helps clean the teeth with every bite to support good oral health between brushings.
-                    Proudly made in the USA with the world’s finest ingredients; contains no high fructose corn syrup, artificial flavors or sugar.
+                    Comes in a convenient, resealable package and is easy to prepare by simply rehydrating in water
+                    Provides essential vitamins and nutrients from all natural ingredients like bok choy, sun-cured carrots and dehydrated zucchini
+                    Ideal for herbivorous reptiles such as uromastyx, iguanas and tortoises
+                    Feed as a treat or with other diets
+                    Nutritious, dehydrated ingredients that are quick and convenient - no refrigeration required!
                 </p>
             </div>
             <div class="col-2"></div>
@@ -220,7 +216,6 @@
           }, false);
         })();
         </script>
-    
     </div>
 
     <!-- Optional JavaScript -->

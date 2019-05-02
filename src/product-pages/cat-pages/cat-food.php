@@ -8,27 +8,18 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../products.css">
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <script src="../products.js"></script>
-    <title>Dog Toy</title>
+    <title>Cat Food</title>
   </head>
   <body>
 
-    <!-- nav bar -->
+    <!-- navigation bar -->
     <div class="navbar2">
-        <a href="../../index.html">Home</a>
-        <a href="../../about.html">About</a>
-        <div class="dropdown2">
-            <button class="dropbtn2">Products 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content2">
-            <a href="../allproducts.html">All</a>
-            <a href="../dog.html">Dogs</a>
-            <a href="../cat.html">Cats</a>
-            <a href="../reptile.html">Reptiles</a>
-            </div>
-        </div> 
-    </div>
+        <?php
+            include 'cat_nav.php';
+        ?>
+    </div> 
 
     <div class="container-fluid">
 
@@ -36,46 +27,42 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-8 purple-header">
-                <h3 id="product-name">ZippyPaws</h3>
+                <h3 id="product-name">Purina</h3>
             </div>
             <div class="col-2"></div>
         </div>
 
-        <!-- row #2 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-sm">
-                <img src="../../../assets/dog-toys.jpg" class="large-image"/>
-            </div>
-            <div class="col-sm">
-                <h3 id="product-description">ZippyPaws Skinny Peltz No Stuffing Squeaky Plush Dog Toys, 3-pack, Large</h3>
-                <h3 id="product-price">$12.99</h3>
-                <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
-            </div>
-            <div class="col-2"></div>
-        </div>
+        <?php
+            require_once "../../DBConnect.php";
+            $pdo = connect();
+            $data = $pdo->query("select * from product where id = 1000000002;")->fetchAll();
+            foreach ($data as $row) {
+            }
 
-        <!-- row #3 -->
-        <div class="row pt-2">
-            <div class="col-2"></div>
-            <div class="col-8">
-                <p>
-                    <strong>Description</strong>
-                    ZippyPaws Skinny Peltz No Stuffing Squeaky Plush Dog Toys feature three cute woodland-creature designs. 
-                    This set includes a fox, a raccoon and a squirrel, and each large plush toy is filled with two round squeakers 
-                    for hours of squeaking action. These fun toys are designed for medium-sized dogs who love to squeak — with no 
-                    stuffing to ensure they last longer with less mess.
-                </p>
-                <p>
-                    <strong>Key Benefits</strong>
-                    Recommended for medium-sized dogs. Every dog plays differently and, since not all toys are created equal, it’s 
-                    always best to keep a close watch on your pup in case things get ruff. Supervised play will help toys last longer 
-                    and most importantly keep your pal safe. No dog toy is truly indestructible, so always remove the toy from playtime 
-                    if pieces begin to break off.
-                </p>
-            </div>
-            <div class="col-2"></div>
-        </div>
+            // row #2
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-sm">';
+            echo '<img src="'.$row['image_url'].'" class="large-image"/>';
+            echo '</div>';
+            echo '<div class="col-sm">';
+            echo '<h3 id="product-description">'.$row['name'].'</h3>';
+            echo '<h3 id="product-price">$'.$row['price'].'</h3>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+            // row #3
+            echo '<div class="row pt-2">';
+            echo '<div class="col-2"></div>';
+            echo '<div class="col-8">';
+            echo '<p><strong>Description</strong><br/>'.$row['summary'].'</p>';
+            echo '<p><strong>Key Benefits</strong><br/>'.$row['information'].'</p>';
+            echo '</div>';
+            echo '<div class="col-2"></div>';
+            echo '</div>';
+
+        ?>
 
         <!-- row #1 -->
         <div class="row pt-2">
@@ -95,7 +82,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-12">
                             <label for="product-identifier">Product ID Number#</label>
-                            <label id="product-id-num" for="product-identifier">1000123459</label>
+                            <label id="product-id-num" for="product-identifier">1000000002</label>
                         </div>
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>

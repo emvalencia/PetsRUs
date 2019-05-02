@@ -9,26 +9,16 @@
     <link rel="stylesheet" type="text/css" media="screen" href="../../styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../../../assets/favicon.ico" />
     <script src="../products.js"></script>
-    <title>Dog Toy</title>
+    <title>Dog Treats</title>
   </head>
   <body>
 
-    <!-- nav bar -->
+    <!-- navigation bar -->
     <div class="navbar2">
-        <a href="../../index.html">Home</a>
-        <a href="../../about.html">About</a>
-        <div class="dropdown2">
-            <button class="dropbtn2">Products 
-            <i class="fa fa-caret-down"></i>
-            </button>
-            <div class="dropdown-content2">
-            <a href="../allproducts.html">All</a>
-            <a href="../dog.html">Dogs</a>
-            <a href="../cat.html">Cats</a>
-            <a href="../reptile.html">Reptiles</a>
-            </div>
-        </div> 
-    </div>
+        <?php
+            include 'dog_nav.php';
+        ?>
+    </div> 
 
     <div class="container-fluid">
 
@@ -36,7 +26,7 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-8 purple-header">
-                <h3 id="product-name">OneTigris</h3>
+                <h3 id="product-name">American Journey</h3>
             </div>
             <div class="col-2"></div>
         </div>
@@ -45,11 +35,11 @@
         <div class="row pt-2">
             <div class="col-2"></div>
             <div class="col-sm">
-                <img src="../../../assets/dog-harness.jpg" class="large-image"/>
+                <img src="../../../assets/dog-treat.jpg" class="large-image"/>
             </div>
             <div class="col-sm">
-                <h3 id="product-description">OneTigris Tactical Service Vest Dog Harness</h3>
-                <h3 id="product-price">$49.99</h3>
+                <h3 id="product-description">American Journey Beef Jerky Grain-Free Dog Treats</h3>
+                <h3 id="product-price">$7.99</h3>
                 <!-- <button type="button" class="btn btn-success btn-md" onclick="handleClick('buy')">Buy</button> -->
             </div>
             <div class="col-2"></div>
@@ -61,21 +51,20 @@
             <div class="col-8">
                 <p>
                     <strong>Description</strong>
-                    The OneTigris Tactical Service Vest Dog Harness lets you get into the wild with your adventurous pup while keeping 
-                    her safe and comfortable. This durable, versatile harness is made with a heavy-duty nylon shell and soft interior 
-                    padding for lightweight, water-resistant comfort on any outing. Convenient MOLLE (Modular Lightweight Load-carrying 
-                    Equipment) webbing along both sides of the harness accepts a wide variety of molle pouches so your canine companion 
-                    can carry her own supplies. The fully adjustable neck and chest straps provide a snug, secure fit, while the fuzzy 
-                    fastener-style panels on all three sides allow you to attach an array of morale patches and badges to customize the 
-                    harness to fit your pup’s style and express her individual personality.
+                    American Journey Beef Jerky Dog Treats are grain-free, all-natural, delicious and made with wholesome ingredients 
+                    to fuel the entire pack. This high-protein jerky is crafted in the USA with carefully selected domestic and imported 
+                    ingredients, like mouthwatering real beef from American farms. It’s a simple recipe that starts with a single meat 
+                    protein and just two other all-natural ingredients for a flavor dogs instinctively crave. Instead of grains, this 
+                    meat-rich jerky delivers 38% protein, and no corn, wheat, soy, by-products or artificial colors, flavors or preservatives. 
+                    To ensure quality and safety, American Journey carefully selects ingredients from trusted sources.
                 </p>
                 <p>
                     <strong>Key Benefits</strong>
-                    Durable, versatile harness features a heavy-duty nylon shell and soft interior padding for lightweight, water-resistant comfort.
-                    Convenient MOLLE webbing along both sides of the harness accepts a wide variety of molle pouches to carry gear and supplies.
-                    Fully adjustable neck and chest straps provide a snug, secure fit; an extra-strong V-ring leash attachment provides added security.
-                    Also features a control loop at the front to bring her in close when needed, as well as a crisscross bungee strap for extra storage.
-                    Customize the harness to fit your dog’s style and personality with morale patches and badges; OneTigris patch is included with purchase.
+                    Grain-free, wholesome jerky treats with an enticing flavor that comes from real meat and the chewy texture of genuine jerky.
+                    High in protein with real beef as the first ingredient. This delicious treat delivers 38% protein and features a single source of animal protein.
+                    Crafted in the USA to ensure your dog is getting a safe, quality jerky made from carefully selected domestic and imported ingredients.
+                    All-natural recipe with only three total ingredients with no corn, wheat, soy, by-products or artificial colors, flavors or preservatives.
+                    This wholesome and tasty treat is made from real beef raised on American farms, so you know you’re getting a premium jerky your dog will love.
                 </p>
             </div>
             <div class="col-2"></div>
