@@ -7,10 +7,10 @@
             <i class="fa fa-caret-down"></i>
             </button>
             <div class="dropdown-content2">
-            <a href="../allproducts.html">All</a>
-            <a href="../dog.html">Dogs</a>
-            <a href="../cat.html">Cats</a>
-            <a href="../reptile.html">Reptiles</a>
+            <a href="../allproducts.php">All</a>
+            <a href="../dog.php">Dogs</a>
+            <a href="../cat.php">Cats</a>
+            <a href="../reptile.php">Reptiles</a>
             </div>
         </div>';
 ?>
