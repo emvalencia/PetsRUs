@@ -3,6 +3,16 @@ var cc_is_valid          = false;
 var email_is_valid       = false;
 var all_fields_populated = false;
 
+function addOrderDetails()
+{
+    var email_address = document.forms['submit-order-form']['email-address'].value;
+    var product_name  = document.getElementById('product-name').textContent;
+    var product_desc  = document.getElementById('product-description').textContent;
+    var product_id    = document.getElementById('product-id-num').textContent;
+    var product_price = document.getElementById('product-price').textContent;
+    var quantity      = document.forms['submit-order-form']['quantity'].value;
+}
+
 function send_email()
 {
     var email_address = document.forms['submit-order-form']['email-address'].value;
@@ -59,6 +69,18 @@ function check_fields_populated()
             this.all_fields_populated = false;
             return;
         }
+    }
+
+    if(isNaN(document.forms['submit-order-form']['quantity'].value))
+    {
+        this.all_fields_populated = false;
+        return;
+    }
+    
+    if(isNaN(document.forms['submit-order-form']['csc'].value || document.forms['submit-order-form']['csc'].value.length != 3))
+    {
+        this.all_fields_populated = false;
+        return;
     }
 
     this.all_fields_populated = true;
@@ -183,7 +205,8 @@ function adjustEmailStyles()
 function processCheckout()
 {
     if(email_is_valid && cc_is_valid && phone_is_valid && all_fields_populated)
-        this.send_email();
+        // this.send_email();
+        this.addOrderDetails();
     else  
         console.log("incorrect checkout");
 }
