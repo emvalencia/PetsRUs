@@ -8,26 +8,17 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="styles.css">
     <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
     <title>About Us</title>
   </head>
   <body>
-      <!-- nav bar -->
-      <div class="navbar2">
-            <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <div class="dropdown2">
-                <button class="dropbtn2">Products
-                    <i class="fa fa-caret-down"></i>
-                </button>
-                <div class="dropdown-content2">
-                <a href="product-pages/allproducts.html">All</a>
-                <a href="product-pages/dog.html">Dogs</a>
-                <a href="product-pages/cat.html">Cats</a>
-                <a href="product-pages/reptile.html">Reptiles</a>
-                </div>
-            </div> 
-      </div>
-      <!-- end nav bar -->
+
+  <!-- navigation bar -->
+  <div class="navbar2">
+      <?php
+          include 'src_nav.php';
+      ?>
+  </div>
 
       <!-- container -->
       <div class="container-fluid">
@@ -118,7 +109,7 @@
                               that every single one of the many dog products available is carefully selected to ensure that you can 
                               provide your dog with the very best in their daily lives long after they've grown out of their puppy beds, 
                               collars, and accessories.</p>
-                          <a href="product-pages/dog.html" class="btn btn-secondary btn-sm">View Dog Products</a>
+                          <a href="product-pages/dog.php" class="btn btn-secondary btn-sm">View Dog Products</a>
                         </div>
                       </div>
                     </div>
@@ -142,7 +133,7 @@
                                     and hours of fun and games.
                                 </p>
 
-                                <a href="product-pages/cat.html" class="btn btn-secondary btn-sm">View Cat Products</a>                        
+                                <a href="product-pages/cat.php" class="btn btn-secondary btn-sm">View Cat Products</a>                        
                             </div>
                         </div>
                     </div>
@@ -171,7 +162,7 @@
                                     to ball pythons and burrowing turtles, you’ll find the healthcare and habitat supplies and 
                                     accessories your herp needs at our reptile store.
                                 </p>
-                                <a href="product-pages/reptile.html" class="btn btn-secondary btn-sm">View Reptile Products</a>                        
+                                <a href="product-pages/reptile.php" class="btn btn-secondary btn-sm">View Reptile Products</a>                        
                             </div>
                         </div>
                     </div>
@@ -190,7 +181,7 @@
                                     <p class="card-text card-text-sm">Can't get enough of our products? Why not view them all! Here at PetsRUs we provide
                                         ourselves on the quality of all our products. Click below to view all our products.
                                     </p>
-                                    <a href="product-pages/allproducts.html" class="btn btn-secondary btn-sm">View All Products</a>                            
+                                    <a href="product-pages/allproducts.php" class="btn btn-secondary btn-sm">View All Products</a>                            
                                 </div>
                             </div>
                         </div>

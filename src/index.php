@@ -6,26 +6,18 @@
   <link rel="stylesheet" type="text/css" media="screen" href="styles.css">
   <link rel="stylesheet" type="text/css" media="screen" href="product-pages/products.css">
   <link rel="shortcut icon" type="image/x-icon" href="../assets/favicon.ico" />
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
   <title>Home</title>
 </head>
 
-<!-- navbar -->
-<div class="navbar2">
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <div class="dropdown2">
-    <button class="dropbtn2">Products 
-      <i class="fa fa-caret-down"></i>
-    </button>
-    <div class="dropdown-content2">
-      <a href="product-pages/allproducts.html">All</a>
-      <a href="product-pages/dog.html">Dogs</a>
-      <a href="product-pages/cat.html">Cats</a>
-      <a href="product-pages/reptile.html">Reptiles</a>
-    </div>
-  </div> 
-  <a href="http://127.0.0.1:8080/admin.php">Admin</a>
-</div>
+
+  <!-- navigation bar -->
+  <div class="navbar2">
+      <?php
+          include 'src_nav.php';
+      ?>
+      <a href="http://127.0.0.1:8080/admin.php">Admin</a>
+  </div>
 
 <body style="margin:0;">
 

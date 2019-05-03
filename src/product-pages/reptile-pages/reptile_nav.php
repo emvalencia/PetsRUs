@@ -1,7 +1,7 @@
 <?php
     echo
-        '<a href="../../index.html">Home</a>
-        <a href="../../about.html">About</a>
+        '<a href="../../index.php">Home</a>
+        <a href="../../about.php">About</a>
         <div class="dropdown2">
             <button class="dropbtn2">Products 
             <i class="fa fa-caret-down"></i>
