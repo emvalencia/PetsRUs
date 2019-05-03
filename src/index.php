@@ -16,7 +16,7 @@
       <?php
           include 'src_nav.php';
       ?>
-      <a href="http://127.0.0.1:8080/admin.php">Admin</a>
+      <!-- <a href="http://127.0.0.1:8080/admin.php">Admin</a> -->
   </div>
 
 <body style="margin:0;">
