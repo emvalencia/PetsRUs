@@ -45,10 +45,10 @@
             
             $file = fopen($fileName, "r");
             
-            while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {
+            while (($column = fgetcsv($file, 30000, ",")) !== FALSE) {
 
-                $sqlInsert = "INSERT into Product (id, name, price, type, category, page_url, image_url, summary, information)
-                       values ('" . $column[0] . "','" . $column[1] . "','" . $column[2] . "','".$column[3]."','".$column[4]."','".$column[5]."','".$column[6]."','".$column[7]."','".$column[8]."')";
+                $sqlInsert = "INSERT into Product (id, name, price, type, category, page_url, image_url, summary, description, benefits)
+                       values ('" . $column[0] . "','" . $column[1] . "','" . $column[2] . "','".$column[3]."','".$column[4]."','".$column[5]."','".$column[6]."','".$column[7]."','".$column[8]."','".$column[9]."')";
                 
                 // echo $sqlInsert . "<br/>";
 

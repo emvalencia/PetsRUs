@@ -229,7 +229,6 @@ function adjustEmailStyles()
 function processCheckout()
 {
     if(email_is_valid && cc_is_valid && phone_is_valid && all_fields_populated)
-        // this.send_email();
         this.addOrderDetails();
     else  
         console.log("incorrect checkout");
