@@ -232,6 +232,11 @@
 
                         // var_dump($sqlInsert);
                         $pdo->exec($sqlInsert);
+
+                        //open a new confirmation page using the order number to retrive order details
+                        $url = "'../confirmation-page.php?order=$order_num2'";
+                        echo "<script>window.open($url)</script>";
+
                     }
                 ?>
             </div>
