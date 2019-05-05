@@ -2,16 +2,7 @@ var phone_is_valid       = false;
 var cc_is_valid          = false;
 var email_is_valid       = false;
 var all_fields_populated = false;
-
-function addOrderDetails()
-{
-    var email_address = document.forms['submit-order-form']['email-address'].value;
-    var product_name  = document.getElementById('product-name').textContent;
-    var product_desc  = document.getElementById('product-description').textContent;
-    var product_id    = document.getElementById('product-id-num').textContent;
-    var product_price = document.getElementById('product-price').textContent;
-    var quantity      = document.forms['submit-order-form']['quantity'].value;
-}
+var ordernum = Math.floor((Math.random() * 10000000000));
 
 function send_email()
 {
@@ -111,7 +102,7 @@ function check_fields_populated()
 }
 
 function validate_form(element)
-{
+{  
     this.phone_is_valid = false;
     this.cc_is_valid    = false;
     this.email_is_valid = false;
@@ -226,20 +217,8 @@ function adjustEmailStyles()
     }
 }
 
-function processCheckout()
-{
-    if(email_is_valid && cc_is_valid && phone_is_valid && all_fields_populated)
-        // this.send_email();
-        this.addOrderDetails();
-    else  
-        console.log("incorrect checkout");
-}
-
 function handleClick(element) 
 {
-
-    console.log(element);
-
     /* switch to main pet page */
     if (element == 'dog') window.location.href = "dog.php";
     else if (element == 'cat') window.location.href = "cat.php";

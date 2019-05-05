@@ -77,13 +77,25 @@
         <div class="row pt-2 pb-5">
             <div class="col-2"></div>
             <div class="col">
-                <form name="submit-order-form" class="needs-validation" novalidate id="main-order-form">
+            <form name="submit-order-form" class="needs-validation" method="POST" novalidate id="main-order-form">
                     <h3>Product Information</h3>
-                    <div class="form-row">
-                        <div class="form-group col-md-12">
-                            <label for="product-identifier">Product ID Number#</label>
-                            <label id="product-id-num" for="product-identifier">1000000005</label>
-                        </div>
+                    <div class="form-row pb-3">
+                        <?php
+                            require_once "../../DBConnect.php";
+                            $pdo = connect();
+                            $data = $pdo->query("select * from product where id = 1000000005;")->fetchAll();
+                            foreach ($data as $row) {
+                            }
+
+                            echo '<div class="form-group col-md-4">';
+                            echo '<label for="product-identifier">Product ID Number#</label>';
+                            echo '<input class="form-control" id="product-id-num" name="product-id-num" for="product-identifier" disabled=true value='. $row['id'] .'></div>';
+                        
+                            echo '<div class="form-group col-md-2">';
+                            echo '<label for="product-identifier">Price</label>';
+                            echo '<input class="form-control" id="prod-price" name="prod-price" for="product-identifier" disabled=true value='. $row['price'] .'></div>';
+                        
+                        ?>
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>
                             <input oninput="validate_form('quantity')" name="quantity" type="text" class="form-control" id="quantity" placeholder="3" required>
@@ -123,7 +135,7 @@
                             <label for="inputAddress">Address</label>
                             <input oninput="validate_form('inputAddress')" name="inputAddress" type="text" class="form-control" id="inputAddress" placeholder="1234 Main St" required>
                             <div class="invalid-feedback">Please enter a valid address</div>
-                          </div>
+                            </div>
                     </div>
                     <div class="form-row">
                         <div class="form-group col-md-6">
@@ -134,11 +146,11 @@
                         </div>
                         <div class="form-group col-md-4">
                             <label for="inputState">State</label>
-                            <select oninput="validate_form('inputState')" id="inputState" class="form-control" required>
+                            <select oninput="validate_form('inputState')" id="inputState" name="inputState" class="form-control" required>
                                 <option value="">Choose...</option>
-                                <option value="1">California</option>
-                                <option value="2">Oregon</option>
-                                <option value="3">Washington</option>
+                                <option value="California">California</option>
+                                <option value="Oregon">Oregon</option>
+                                <option value="Washington">Washington</option>
                             </select>
                             <div class="invalid-feedback">Please select a state</div>
                         </div>
@@ -150,11 +162,11 @@
                     </div>
                     <div class="form-group">
                         <label for="inputShipping">Shipping</label>
-                        <select oninput="validate_form('inputShipping')" id="inputShipping" class="form-control" required>
+                        <select oninput="validate_form('inputShipping')" id="inputShipping" name="inputShipping" class="form-control" required>
                             <option value="">Choose...</option>
-                            <option value="1">Overnight (1-day)</option>
-                            <option value="2">Expedited (2-3 business days)</option>
-                            <option value="3">Ground (4-6 business days)</option>
+                            <option value="overnight">Overnight (1-day)</option>
+                            <option value="expedited">Expedited (2-3 business days)</option>
+                            <option value="ground">Ground (4-6 business days)</option>
                         </select>
                         <div class="invalid-feedback">Please select a shipping option</div>
                     </div>
@@ -162,7 +174,7 @@
                     <div class="form-row">
                         <div class="form-group col-md-6">
                             <label for="credit-card">Credit Card Information</label>
-                            <input oninput="validate_form('credit-card')" type="text" class="form-control" id="credit-card" placeholder="1234-1234-1234-1234" required>
+                            <input oninput="validate_form('credit-card')" type="text" class="form-control" id="credit-card" name="credit-card" placeholder="1234-1234-1234-1234" required>
                             <div class="invalid-feedback">Please enter as: 1234-1234-1234-1234</div>
 
                         </div>
@@ -174,17 +186,55 @@
                         </div>
                         <div class="form-group col-md-3">
                             <label for="inputCreditCardType">Type of Card</label>
-                            <select oninput="validate_form('inputCreditCardType')" id="inputCreditCardType" class="form-control" required>
+                            <select oninput="validate_form('inputCreditCardType')" id="inputCreditCardType" name="inputCreditCardType" class="form-control" required>
                                 <option value="">Choose...</option>
-                                <option value="1">VISA</option>
-                                <option value="2">Mastercard</option>
-                                <option value="3">American Express</option>
+                                <option value="VISA">VISA</option>
+                                <option value="Mastercard">Mastercard</option>
+                                <option value="American Express">American Express</option>
                             </select>
                             <div class="invalid-feedback">Please select a card type</div>
                         </div>
                     </div>
-                    <button disabled id="checkout-btn" type="submit" class="btn btn-success" onclick="processCheckout()">Checkout</button>
+                    <button disabled id="checkout-btn" name="checkout-btn" type="submit" class="btn btn-success">Checkout</button>
                 </form>
+                <?php
+
+                    if(isset($_POST['checkout-btn']))
+                    {
+                        require_once "../../DBConnect.php";
+                        $pdo = connect();
+                        $data = $pdo->query("select * from product where id = 1000000005;")->fetchAll();
+                            foreach ($data as $row) {
+                            }
+
+                        $order_num2     = rand();
+                        $product_price2 = $row['price'];
+                        $product_id2    = $row['id'];
+                        $quantity2      = $_POST['quantity'];
+                        $fname2         = $_POST['first-name'];
+                        $lname2         = $_POST['last-name'];
+                        $email_address2 = $_POST['email-address'];
+                        $phone_number2  = $_POST['phone'];
+                        $address2       = $_POST['inputAddress'];
+                        $state2         = $_POST['inputState'];
+                        $city2          = $_POST['inputCity'];
+                        $zip2           = (int)$_POST['inputZip'];
+                        $shipping2      = $_POST['inputShipping'];
+                        $credit_card2   = $_POST['credit-card'];
+                        $csc_num2       = (int)$_POST['csc'];
+                        $card_type2     = $_POST['inputCreditCardType'];
+
+                        $sqlInsert = "INSERT into OrderDetails (order_num, price, product_id, qty, fname, lname, 
+                                                                email, phone, address, state, city, zip, shipping_option, 
+                                                                cc_num, csc_num, card_type) 
+                                            values ($order_num2, $product_price2, $product_id2, $quantity2, '$fname2', '$lname2', '$email_address2',
+                                                    '$phone_number2', '$address2', '$state2', '$city2', $zip2, '$shipping2', '$credit_card2',
+                                                    $csc_num2, '$card_type2')";
+
+                        // var_dump($sqlInsert);
+                        $pdo->exec($sqlInsert);
+                    }
+                ?>
             </div>
             <div class="col-2"></div>
         </div>
