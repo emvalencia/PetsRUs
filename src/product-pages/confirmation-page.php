@@ -48,7 +48,7 @@
                     
                     echo "<h3 class='pt-3 pb-4'>Order Details for: ". $row['fname'] . " ". $row['lname']. "</h3>";
               
-                    $total = $row['qty'] * $row2['price'] * $row3['rate'];
+                    $total = $row['qty'] * $row2['price'] + ($row3['rate']*$row2['price']);
 
                     echo '<table class="table table-hover">';
                     echo '<thead class="thead-light">';
