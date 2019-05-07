@@ -12,20 +12,20 @@ GENERAL WEBSITE INFORMATION
 Website URL: http://centaurus-3.ics.uci.edu:1027/index.html
 
 General Description 
-PetsRUs is a simple, interactive e-commerce website generated with HTML, CSS, JS, 
-and Bootstrap. The website contains a homepage, about page, and multiple product 
-pages. Each product page contains a form that allows the user to input information,
+PetsRUs is a simple, interactive e-commerce website generated with HTML, CSS, JS,
+Bootstrap, PHP, and Ajax. The website contains a homepage, about page, and multiple 
+product pages. Each product page contains a form that allows the user to input information,
 such as name, shipping address, and payment information, to buy the product, as per 
 project guidelines.
 
-index.html
-The index.html file leads to the website's homepage. The top of the website has
+index.php
+The index.php file leads to the website's homepage. The top of the website has
 consists of a navigation bar that will take you to 3 sections: the homepage, 
 the about page, and the main (all) products page. The 3rd tab has a dropdown menu
 that will navigate to 4 different categories of pet items based on pet type (all, 
 dog, cat, and reptile). 
 
-about.html
+about.php
 The about.html page contains information about PetsRUs, including redirections to
 product pages and information about the management team. 
 
@@ -43,7 +43,57 @@ button to continue with the transaction and open the email. Note that we only
 ship to 3 states! 
 
 /------------------------------------------------------------------------------
-REQUIREMENTS SECTION 
+REQUIREMENTS SECTION Part 2
+/------------------------------------------------------------------------------
+
+1. You want to use PHP and MySQL database to generate the product information 
+dynamically. The information about available products should be read from one 
+or more tables in your database and the corresponding HTML pages describing the 
+details of your products should be generated dynamically. You will use PHP to 
+query your MySQL database to obtain the details of a product and generate the 
+proper content in HTML format.
+
+Product information is dynamically generated in all main product pages (cat, 
+dog, reptile, allproducts.php) and on all indivdual product pages 
+(dog-food.php). Using PHP and MySQL, we establish a connection to the database,
+which is shown in DBConnect.php, and query it to get and display the 
+information we need in HTML (all product information, including images, ids, 
+prices, descriptions, urls, summaries, etc...). The database is located in 
+petsrus.sql and the product information is located and uploaded from 
+inventory.csv. 
+
+2. When the user submits a form to order a product, instead of sending an email 
+from the client-side, as you did in first assignment, the request should be 
+sent to a server-side PHP script that stores that information in a database 
+table. The form should be validated to prevent insertion of bad data in your 
+database. 
+
+TODO
+
+
+3. After successfully storing the order information in a database table, a 
+dynamically generated confirmation page should to be displayed to the user 
+with the details of the order. 
+
+TODO
+
+4. Use Ajax to make your website dynamic and interactive. Among others, you 
+could use Ajax to assist the user with filling the order forms, e.g., when 
+the user chooses a particular state for delivery, obtain the corresponding 
+tax rate from the backend database to update the total price for the product 
+dynamically, or as another example, provide auto complete capability, such 
+as suggesting states as the user types the name of a state. You can use these 
+files to help with this task: zip codesPreview the document and tax 
+ratesPreview the document. You have freedom in identifying other opportunities 
+for using Ajax in making your website dynamic and interactive. At the very 
+least, your website should make use of Ajax for two non-trivial features that 
+the grader can verify. 
+
+TODO
+
+
+/------------------------------------------------------------------------------
+REQUIREMENTS SECTION Part 1 (satisfied)
 /------------------------------------------------------------------------------
 
 1. An overview of your business, the products you sell, the management team, and 
