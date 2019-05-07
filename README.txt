@@ -9,7 +9,7 @@
 GENERAL WEBSITE INFORMATION 
 /------------------------------------------------------------------------------
 
-Website URL: http://centaurus-3.ics.uci.edu:1027/index.html
+Website URL: http://centaurus-10.ics.uci.edu:1037/index.php
 
 General Description 
 PetsRUs is a simple, interactive e-commerce website generated with HTML, CSS, JS,
