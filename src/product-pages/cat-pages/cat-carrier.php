@@ -12,6 +12,7 @@
     <script src="../products.js"></script>
     <title>Cat Carrier</title>
   </head>
+
   <body>
 
     <!-- navigation bar -->
@@ -155,7 +156,7 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputZip">Zip</label>
-                            <input oninput="validate_form('inputZip')" name="inputZip" type="text" class="form-control" id="inputZip" placeholder="90003" required>
+                            <input oninput="validate_form('inputZip')" name="inputZip" type="text" class="form-control" id="inputZip" placeholder="90003" onkeyup="getCityState(this.value)" required>
                             <div class="invalid-feedback">Please enter a valid zip code</div>
                         </div>
                     </div>
@@ -194,8 +195,9 @@
                             <div class="invalid-feedback">Please select a card type</div>
                         </div>
                     </div>
-                    <button disabled id="checkout-btn" name="checkout-btn" type="submit" class="btn btn-success">Checkout</button>
+                    <button disabled id="checkout-btn" name="checkout-btn" type="submit" class="btn btn-success" >Checkout</button>
                 </form>
+
                 <?php
 
                     if(isset($_POST['checkout-btn']))

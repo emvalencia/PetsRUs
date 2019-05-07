@@ -157,7 +157,7 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputZip">Zip</label>
-                            <input oninput="validate_form('inputZip')" name="inputZip" type="text" class="form-control" id="inputZip" placeholder="90003" required>
+                            <input oninput="validate_form('inputZip')" name="inputZip" type="text" class="form-control" id="inputZip" placeholder="90003" onkeyup="getCityState(this.value)" required>
                             <div class="invalid-feedback">Please enter a valid zip code</div>
                         </div>
                     </div>

@@ -243,3 +243,26 @@ function handleClick(element)
     /* else */
     // window.location.href = "../error-page.html";
 }
+
+function getCityState(zip) {
+      if (window.XMLHttpRequest) {
+         var xhr = new XMLHttpRequest();
+      }
+      else {
+         var xhr = new ActiveXObject ("Microsoft.XMLHTTP");
+      }
+    
+      // updates the page with city after query
+      xhr.onreadystatechange = function () { 
+        if (xhr.readyState == 4 && xhr.status == 200) { 
+            var result = xhr.responseText;
+            document.getElementById ("inputCity").value = result;
+        } 
+      } 
+
+      xhr.open ("GET", "getCityState.php?zip=" + zip, true);
+      xhr.send ();  
+    }
+ 
+     
+ 
