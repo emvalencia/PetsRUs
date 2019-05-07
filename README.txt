@@ -9,7 +9,7 @@
 GENERAL WEBSITE INFORMATION 
 /------------------------------------------------------------------------------
 
-Website URL: http://centaurus-10.ics.uci.edu:1037/index.html
+Website URL: http://centaurus-10.ics.uci.edu:1037/index.php
 
 General Description 
 PetsRUs is a simple, interactive e-commerce website generated with HTML, CSS, JS,
@@ -97,7 +97,10 @@ for using Ajax in making your website dynamic and interactive. At the very
 least, your website should make use of Ajax for two non-trivial features that 
 the grader can verify. 
 
-TODO
+Ajax was used to gather information to fill city and zip code tax rate 
+information, as the two non-trivial features. Both are automatically 
+populated/changed when you enter the zip code via function calls and HTTP 
+requests. Note that the tax rate is located near the price and quantity section. 
 
 
 /------------------------------------------------------------------------------
