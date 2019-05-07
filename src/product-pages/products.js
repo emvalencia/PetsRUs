@@ -263,6 +263,27 @@ function getCityState(zip) {
       xhr.open ("GET", "getCityState.php?zip=" + zip, true);
       xhr.send ();  
     }
+
+
+function getTaxRate(zip) {
+    if (window.XMLHttpRequest) {
+        var xhr = new XMLHttpRequest();
+    }
+    else {
+        var xhr = new ActiveXObject ("Microsoft.XMLHTTP");
+    }
+    
+    // updates the page with city after query
+    xhr.onreadystatechange = function () { 
+        if (xhr.readyState == 4 && xhr.status == 200) { 
+            var result = xhr.responseText;
+            document.getElementById ("tax-rate").value = result;
+        } 
+    } 
+
+    xhr.open ("GET", "getTaxRate.php?zip=" + zip, true);
+    xhr.send ();  
+    }
  
      
  

@@ -95,6 +95,12 @@
                             echo '<input class="form-control" id="prod-price" name="prod-price" for="product-identifier" disabled=true value='. $row['price'] .'></div>';
                         
                         ?>
+
+
+                        <div class="form-group col-md-2">
+                        <label for="tax-rate-identifier">Tax</label>
+                        <input class="form-control" id="tax-rate" name="tax-rate-identifier" disabled=true placeholder="0.15" ></div>
+
                         <div class="form-group col-md-2">
                             <label for="quantity">Quantity</label>
                             <input oninput="validate_form('quantity')" name="quantity" type="text" class="form-control" id="quantity" placeholder="3" required>
@@ -155,7 +161,7 @@
                         </div>
                         <div class="form-group col-md-2">
                             <label for="inputZip">Zip</label>
-                           <input oninput="validate_form('inputZip')" name="inputZip" type="text" class="form-control" id="inputZip" placeholder="90003" onkeyup="getCityState(this.value)" required>
+                           <input oninput="validate_form('inputZip')" name="inputZip" type="text" class="form-control" id="inputZip" placeholder="90003" onkeyup="getCityState(this.value);getTaxRate(this.value)" required>
                             <div class="invalid-feedback">Please enter a valid zip code</div>
                         </div>
                     </div>
