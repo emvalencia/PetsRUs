@@ -9,7 +9,7 @@
 GENERAL WEBSITE INFORMATION 
 /------------------------------------------------------------------------------
 
-Website URL: http://centaurus-3.ics.uci.edu:1027/index.html
+Website URL: http://centaurus-10.ics.uci.edu:1037/index.html
 
 General Description 
 PetsRUs is a simple, interactive e-commerce website generated with HTML, CSS, JS,
@@ -68,14 +68,22 @@ sent to a server-side PHP script that stores that information in a database
 table. The form should be validated to prevent insertion of bad data in your 
 database. 
 
-TODO
+The form is validated every single time a user enters inforamtion into the form controls 
+using the function validate_form(). The "Checkout" button is disabled until the entire form
+has been validated. Once the user enters all their inforamtion and it has been validated the checkout
+button is enabled which in turn runs a php script that concatenates all the information from the
+form-controls into a single query that inserts the data into our OrderDetails table. 
 
 
 3. After successfully storing the order information in a database table, a 
 dynamically generated confirmation page should to be displayed to the user 
 with the details of the order. 
 
-TODO
+Once the order information has been stored a php script opens a new window with the 
+order number encoded into the url. This inturn allows the confirmation-page.php file to 
+grab the order number from the url and run a query into our OrderDetails table. The query grabs
+the newly entered information and for that order number and presents the information as a 
+receipt to the user.
 
 4. Use Ajax to make your website dynamic and interactive. Among others, you 
 could use Ajax to assist the user with filling the order forms, e.g., when 
