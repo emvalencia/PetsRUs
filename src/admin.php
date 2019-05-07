@@ -47,7 +47,7 @@
             
             while (($column = fgetcsv($file, 10000, ",")) !== FALSE) {
 
-                $sqlInsert = "INSERT into Product (id, name, price, type, category, page_url, image_url, summary, information)
+                $sqlInsert = "INSERT into product (id, name, price, type, category, page_url, image_url, summary, information)
                        values ('" . $column[0] . "','" . $column[1] . "','" . $column[2] . "','".$column[3]."','".$column[4]."','".$column[5]."','".$column[6]."','".$column[7]."','".$column[8]."')";
                 
                 // echo $sqlInsert . "<br/>";
@@ -96,7 +96,7 @@
 
                 <form class="form-horizontal" action="" method="post" name="uploadCSV3" enctype="multipart/form-data">
                     <div class="input-row">
-                        <label class="col-md-4 control-label">Insert into Product Table</label> 
+                        <label class="col-md-4 control-label">Insert into product Table</label> 
                         <input type="file" name="file3" id="file3" accept=".csv">
                         <button type="submit" id="submit3" name="import-inventory" class="btn-primary">Import</button>
                         <br/>
