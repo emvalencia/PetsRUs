@@ -33,29 +33,34 @@
 
                     $order_num = (!empty($_GET['order']) ? $_GET['order'] : false);
 
-                    $data = $pdo->query("select * from orderdetails where order_num = $order_num;")->fetchAll();
+                    $data = $pdo->query("select * from OrderDetails where order_num = $order_num;")->fetchAll();
                             foreach ($data as $row) {
                             }
 
                     $data2 = $pdo->query("select * from product where  id =". $row['product_id'].";")->fetchAll();
                             foreach ($data2 as $row2) {
                             }
+
+                    $data3 = $pdo->query("select rate from TaxRate where  zip =". $row['zip'].";")->fetchAll();
+                    foreach ($data3 as $row3) {
+                    }
                     
                     
                     echo "<h3 class='pt-3 pb-4'>Order Details for: ". $row['fname'] . " ". $row['lname']. "</h3>";
               
-                    $total = $row['qty'] * $row2['price'];
+                    $total = $row['qty'] * $row2['price'] * $row3['rate'];
 
                     echo '<table class="table table-hover">';
                     echo '<thead class="thead-light">';
                     echo '<tr>';
-                    echo '<th style="width: 14%;"scope="col">Order Number</th>';
-                    echo '<th style="width: 14%;"scope="col">First Name</th>';
-                    echo '<th style="width: 14%;"scope="col">Last Name</th>';
+                    echo '<th style="width: 15%;"scope="col">Order Number</th>';
+                    echo '<th style="width: 10%;"scope="col">First Name</th>';
+                    echo '<th style="width: 10%;"scope="col">Last Name</th>';
                     echo '<th style="width: 25%;"scope="col">Product</th>';
                     echo '<th style="width: 10%;"scope="col">Quantity</th>';
                     echo '<th style="width: 10%;"scope="col">Price</th>';
-                    echo '<th style="width: 13%;"scope="col">Grand Total</th>';
+                    echo '<th style="width: 10%;"scope="col">Tax Rate %</th>';
+                    echo '<th style="width: 10%;"scope="col">Grand Total</th>';
                     echo '</tr>';
                     echo '</thead>';
                     echo '<tbody>';
@@ -66,7 +71,8 @@
                     echo '<td>'.$row2['name'].'</td>';
                     echo '<td>'.$row['qty'].'</td>';
                     echo '<td>$'.$row2['price'].'</td>';
-                    echo '<td>$'.$total.'</td>';
+                    echo '<td>'. $row3['rate'].'</td>';
+                    echo '<td>$'.round($total,2).'</td>';
                     echo '</tr>';
                     echo '</tbody>';
                     echo '</table>';

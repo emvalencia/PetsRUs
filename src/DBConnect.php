@@ -3,8 +3,8 @@
     function connect()
     {        
         $servername = "127.0.0.1";
-        $username = "root";
-        $password = "root";
+        $username = "joey";
+        $password = "123456789";
         $dbname = "petsrus";
         $charset = "utf8mb4";
         
